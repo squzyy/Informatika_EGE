@@ -2,7 +2,7 @@
 #'01234567' - это например восьмиричная система счисления
 #Важные моменты: Индексация всегда с 0, Отрицательные индексы (начинаются с -1 для последнего символа)
 #permutations - когда перестановки, или что-то нужно использовать 1 раз, так же очень нужнен (не всегда) set для отделения одинаковых строк
-
+# если мне нужно узнать не полное количество, а какое-то значение например в середине то использовать enumerate
 """
 from itertools import product
 k = 0
@@ -175,9 +175,7 @@ for numb, i in enumerate(product(sorted('ЛАЙМ'), repeat = 5), 1):
     if word.count('М') == 1 and'ЛЛ' not in word:
         print(numb, word)
 """
-
-
-
+"""
 from itertools import *
 
 for dd, i in enumerate(product('0123456789ABC', repeat=6), 1):
@@ -189,7 +187,40 @@ for dd, i in enumerate(product('0123456789ABC', repeat=6), 1):
         continue
     print(dd, word)
     break
-   
+"""
+"""
+from itertools import*
+
+for numb, i in enumerate(product(sorted('СТРОКА'), repeat = 5), 1):
+    word = ''.join(i)
+    if word[0] != 'А' and word[0] != 'С' and word[0] != 'Т' and word.count('О') == 2 and numb % 2 == 0:
+        print(numb, word)
+"""
+"""
+from itertools import product
+bund = 0
+for i in product('ВЗГЛЯД', repeat=4):
+    
+    word = ''.join(i)
+    if 1 <= word.count('З') <= 2:
+        bund += 1
+        print(bund)
+"""
+"""
+from itertools import*
+cnt = 0
+for i in product('012345', repeat = 6):
+    word = ''.join(i)
+    nochet = '135'
+    if word[0] != '0' and word.count('2') == 1:
+        if all('2' + g not in word and g + '2' not in word for g in nochet):
+            cnt += 1
+            print(cnt)
+"""
+    
+    
+
+
 
     
 

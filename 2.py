@@ -225,9 +225,51 @@ for p in permutations('wxyz', r=4):
         f3(**dict(zip(p, table[2]))) == table[2][-1]):
             print(*p)
 '''
+'''
+from itertools import*
 
-    
+def f(x, y, z, w):
+    return (x or y) and (not(y == z)) and (not w)
 
-                
+for a, b, c, d in product([0, 1], repeat = 4):
+    table = (
+        (1, a, 1, b, 1),
+        (0, 1, c, 0, 1),
+        (d, 1, 1, 0, 1)
+    )
+
+    if len(table) == len(set(table)):
+        for p in permutations('xyzw', r=4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
+  '''
+
+
+
+
+
+
+
+
+
+
+
+from itertools import*
+
+def f(x, y, w):
+    return (x <= y) and (w or (not w))
+
+for a, b, c in product([0, 1], repeat=3):
+    table = (
+        (1, 1, 0, 0),
+        (a, 1, b, 0),
+        (1, 0, 1, 1),
+        (1, c, 1, 1)
+    )
+
+    if len(table) == len(set(table)):
+        for p in permutations('xyw', r=3):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
             
         

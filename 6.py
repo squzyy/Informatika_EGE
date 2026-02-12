@@ -150,35 +150,7 @@ for x in range(-50, 50):
         dot(3, 'red')
 done()
 '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
 from turtle import*
 
 left(90)
@@ -195,4 +167,36 @@ for x in range(-50, 50):
     for y in range(-50, 50):
         goto(x * k, y * k)
         dot(3, 'red')
+done()
+'''
+
+from turtle import*
+k = 15
+left(90)
+screensize(2000, 2000)
+tracer(0)
+
+for i in range(2):
+    fd(3 * k)
+    rt(90)
+    fd(20 * k)
+    rt(90)
+up()
+bk(8 * k)
+rt(90)
+fd(9 * k)
+lt(90)
+down()
+
+for i in range(2):
+    fd(16 * k)
+    rt(90)
+    fd(8 * k)
+    rt(90)
+up()
+
+for x in range(-50, 50):
+    for y in range(-50, 50):
+        dot(3, 'red')
+        goto(x * k, y * k)
 done()
