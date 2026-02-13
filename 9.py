@@ -99,7 +99,7 @@ for yes, i in enumerate(open('da.txt'), 1):
         if max(povt3) > max(povt2):
             print(yes)
 '''
-
+'''
 da = 0
 for i in (open('da.txt')):
     a = sorted([int(x) for x in i.split()])
@@ -109,9 +109,49 @@ for i in (open('da.txt')):
         a[0] + a[3] == a[1] + a[2]):
         da += 1
         print(da)
-    
-
-
+'''
+'''
+k = 0
+for i in open('da.txt'):
+    a = sorted([int(x) for x in i.split()])
+    krat = any(s % 3 == 0 for s in a)
+    if krat and (a[0] + a[1]) > a[2]:
+        k += 1
+print(k)
+'''
+'''
+k = 0
+for i in open('da.txt'):
+    a = sorted([int(x) for x in i.split()])
+    if a[3] < (a[0] + a[1] + a[2]) and \
+    (a[0] + a[1] == a[2] + a[3] or
+     a[0] + a[2] == a[1] + a[3] or
+     a[0] + a[3] == a[2] + a[1]):
+        k += 1
+print(k)
+'''
+'''
+k = 0
+for i in open('da.txt'):
+    a = ([int(x) for x in i.split()])
+    razn = [x for x in a if a.count(x) == 1]
+    if a[0] < a[1] < a[2]  and razn:
+        k += 1
+print(k)
+'''
+'''
+k = 0
+for i in open('da.txt'):
+    a = ([int(x) for x in i.split()])
+    povt = [x for x in a if a.count(x) == 2]
+    nepovt = [x for x in a if a.count(x) == 1]
+    if len(povt) > 0:  # есть хотя бы одно число, повторяющееся 2 раза
+        if not nepovt:  # нет неповторяющихся чисел
+            k += 1
+        elif all(p > max(nepovt) for p in povt):  # все повторяющиеся больше всех неповторяющихся
+            k += 1
+print(k)
+'''
 
 
 

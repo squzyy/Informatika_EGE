@@ -220,8 +220,7 @@ for i in product('012345', repeat = 6):
             cnt += 1
             print(cnt)
 """
-    
-    
+
 
 
 
