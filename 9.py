@@ -152,11 +152,32 @@ for i in open('da.txt'):
             k += 1
 print(k)
 '''
+'''
+k = 0
+for i in open('da.txt'):
+    a = [int(x) for x in i.split()]
+    maxc = max(a)
+    minc = min(a)
+    summ = (maxc + minc) % 3 == 0
+    b = sorted(a)
+    comd = (b[0] - b[1] == b[2] - b[3] or \
+            b[0] - b[2] == b[1] - b[3] or \
+            b[0] - b[3] == b[2] - b[1])
+    if summ and comd:
+        k += 1
+print(k)
+ '''
+ '''
+k = 0
+for i in open('da.txt'):
+    a = ([int(x) for x in i.split()])
+    povt = [x for x in a if a.count(x) == 2]
+    nechet = any(c % 2 != 0 for c in a)
+    if (povt and not nechet) or (not povt and nechet):
+        k += 1
+print(k, a)
 
-
-
-
-
+ '''
 
 
 

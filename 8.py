@@ -220,6 +220,28 @@ for i in product('012345', repeat = 6):
             cnt += 1
             print(cnt)
 """
+"""
+from itertools import *
+
+for ss, i in enumerate(product(sorted('БАТЫР'), repeat = 5), 1):
+    word = ''.join(i)
+    if ('Ы' not in word) and ('АА' not in word):
+        print(ss)
+"""
+
+# НЕВЕРНО all(chet + d not in word and nechet + chet not in word for d in nechet) где chet = 'abcd', nechet = '13579'. При выполнении for d in nechet происходит следующее: nechet + chet '13579abcd'
+from itertools import*
+k = 0
+for i in product('0123456789abcd', repeat = 5):
+    word = ''.join(i)
+    chet = 'abcd'
+    nechet = '13579'
+    if word[0] != '0' and \
+    all((lett + dig not in word) and (dig + lett not in word) #Здесь двойной цикл: сначала lett перебирает 'a','b','c','d', а для каждого lett перебираются все dig
+    for lett in 'abcd' for dig in '13579'): #Здесь двойной цикл: сначала lett перебирает 'a','b','c','d', а для каждого lett перебираются все dig
+        k += 1
+        print(k)
+
 
 
 
