@@ -169,11 +169,11 @@ for x in range(-50, 50):
         dot(3, 'red')
 done()
 '''
-
+'''
 from turtle import*
 k = 15
 left(90)
-screensize(2000, 2000)
+screensize(4000, 4000)
 tracer(0)
 
 for i in range(2):
@@ -199,4 +199,25 @@ for x in range(-50, 50):
     for y in range(-50, 50):
         dot(3, 'red')
         goto(x * k, y * k)
+done()
+'''
+
+from turtle import*
+left(90)
+tracer(0)
+screensize(4000, 4000)
+k = 17
+
+rt(315)
+for i in range(7):
+    fd(72 * k)
+    rt(45)
+    fd(43 * k)
+    rt(135)
+up()
+
+for x in range(-70, 10):
+    for y in range(-100, 100):
+        setpos(x * k, y * k)
+        dot(4, 'red')
 done()

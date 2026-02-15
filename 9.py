@@ -167,7 +167,7 @@ for i in open('da.txt'):
         k += 1
 print(k)
  '''
- '''
+'''
 k = 0
 for i in open('da.txt'):
     a = ([int(x) for x in i.split()])

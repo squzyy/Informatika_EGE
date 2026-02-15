@@ -228,7 +228,7 @@ for ss, i in enumerate(product(sorted('БАТЫР'), repeat = 5), 1):
     if ('Ы' not in word) and ('АА' not in word):
         print(ss)
 """
-
+"""
 # НЕВЕРНО all(chet + d not in word and nechet + chet not in word for d in nechet) где chet = 'abcd', nechet = '13579'. При выполнении for d in nechet происходит следующее: nechet + chet '13579abcd'
 from itertools import*
 k = 0
@@ -241,10 +241,36 @@ for i in product('0123456789abcd', repeat = 5):
     for lett in 'abcd' for dig in '13579'): #Здесь двойной цикл: сначала lett перебирает 'a','b','c','d', а для каждого lett перебираются все dig
         k += 1
         print(k)
+"""
+"""
+from itertools import*
+k = 0
+for i in product('012345', repeat=6):
+    word = ''.join(i)
+    if word[0] != '0' and word.count('2') == 1 and \
+    all('1' + d not in word and d + '1' not in word and '3' + d not in word and d + '3' not in word and '5' + d not in word and d + '5' not in word for d in '2'):
+        k += 1
+print(k)     
+"""
+"""
+from itertools import *
+n = 0
+for i in product(sorted('МАРИЯ'), repeat = 4):
+    word = ''.join(i)
+    n += 1
+    print(n, word)
+"""
 
+from itertools import *
 
+for num, i in enumerate(product(sorted("АЛГОРИТМ"), repeat=5), 1):
+    word = ''.join(i)
+    if word[0] not in 'АГ' and word.count('Р') >= 2:
+        if num % 2 == 0:
+            print(num)
+            break 
 
-
+        
 
     
 
