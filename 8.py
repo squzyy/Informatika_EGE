@@ -260,7 +260,7 @@ for i in product(sorted('МАРИЯ'), repeat = 4):
     n += 1
     print(n, word)
 """
-
+"""
 from itertools import *
 
 for num, i in enumerate(product(sorted("АЛГОРИТМ"), repeat=5), 1):
@@ -269,6 +269,18 @@ for num, i in enumerate(product(sorted("АЛГОРИТМ"), repeat=5), 1):
         if num % 2 == 0:
             print(num)
             break 
+"""
+
+from itertools import *
+ss = 0
+for k, i in enumerate(product(sorted('ФАВОРИТ'), repeat=7), 1):
+    word = ''.join(i)
+    if word.count('ТРИО') == 1 and word[:4] != 'ТРИО' and word[-4:] != 'ТРИО': #[:4] первые 4 буквы, [-4:] последние 4
+        if k % 2 != 0:
+            ss += 1
+
+            print(ss, k)
+
 
         
 

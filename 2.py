@@ -262,7 +262,8 @@ for a, b, c in product([0, 1], repeat=3):
         for p in permutations('xyw', r=3):
             if all(f(**dict(zip(p, line))) == line[-1] for line in table):
                 print(*p)
-'''          
+'''
+'''
 from itertools import*
 def f(a, b, c, d):
     return c and (a or d) and (d <= b)
@@ -276,4 +277,40 @@ for x, y, z, w, l, n in product([0, 1], repeat = 6):
     if len(table) == len(set(table)):
         for p in permutations('abcd', r=4):
             if all(f(**dict(zip(p, line))) == line[-1] for line in table):
-                print(*p)      
+                print(*p)
+'''
+
+
+
+from itertools import *
+def f(w, x, y, z):
+    return (x or y) and (not(y == z)) and (not w)
+for a, b, c, d in product([0, 1], repeat = 4):
+    table = ((1, a, 1, b, 1),
+             (0, 1, c, 0, 1),
+             (d, 1, 1, 0, 1))
+
+    if len(table) == len(set(table)):
+        for p in permutations('wxyz', r=4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

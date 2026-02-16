@@ -179,6 +179,15 @@ print(k, a)
 
  '''
 
+k = 0
+for i in open('da.txt'):
+    a = sorted([int(x) for x in i.split()])
+    if a[3] < (a[0] + a[1] + a[2]) and \
+    (a[0] + a[1] == a[2] + a[3] or \
+     a[0] + a[2] == a[1] + a[3] or \
+     a[0] + a[3] == a[1] + a[2]):
+        k += 1
+        print(k)
 
 
 
