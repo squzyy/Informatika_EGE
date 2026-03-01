@@ -270,7 +270,7 @@ for num, i in enumerate(product(sorted("АЛГОРИТМ"), repeat=5), 1):
             print(num)
             break 
 """
-
+'''
 from itertools import *
 ss = 0
 for k, i in enumerate(product(sorted('ФАВОРИТ'), repeat=7), 1):
@@ -280,6 +280,52 @@ for k, i in enumerate(product(sorted('ФАВОРИТ'), repeat=7), 1):
             ss += 1
 
             print(ss, k)
+
+'''
+'''
+from itertools import *
+n = 1
+for k, i in enumerate(product(sorted('ЯНДЕКС'), repeat = 6), 1):
+    word = ''.join(i)
+    if word == 'ЯНДЕКС':
+        print(k)
+'''
+
+
+from itertools import *
+
+for i in product('0123456789ab', repeat = 6):
+    word = ''.join(i)
+    da = '13579b'
+    no = '02468a'
+    if word[0] != '0' and word.count('5') == 1 and \
+    da + no not in word:
+        print(word)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
