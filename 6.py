@@ -201,7 +201,7 @@ for x in range(-50, 50):
         goto(x * k, y * k)
 done()
 '''
-
+'''
 from turtle import*
 left(90)
 tracer(0)
@@ -220,4 +220,21 @@ for x in range(-70, 10):
     for y in range(-100, 100):
         setpos(x * k, y * k)
         dot(4, 'red')
+done()
+'''
+from turtle import*
+left(90)
+k = 15
+tracer(0)
+screensize(2000, 2000)
+
+for i in range(4):
+    fd(14 * k)
+    rt(120)
+up()
+
+for x in range(-20,20):
+    for y in range(-20, 20):
+        dot(3, 'red')
+        goto(x * k, y * k)
 done()

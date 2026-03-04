@@ -325,7 +325,19 @@ for w in range(2):
 
 
 
-
+from itertools import *
+def f(x, y, z, w):
+    return ((y <= w) == (x <= (not z))) and (x or w)
+for a, b in product([0, 1], repeat = 2):
+    table = (
+        (0, 1, 1, 1, 0),
+        (1, 0, 1, 0, 1),
+        (a, 0, 0, b, 1)
+    )
+    if len(table) == len(set(table)):
+        for p in permutations('xyzw', r=4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
 
 
 

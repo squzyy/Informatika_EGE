@@ -290,8 +290,7 @@ for k, i in enumerate(product(sorted('ЯНДЕКС'), repeat = 6), 1):
     if word == 'ЯНДЕКС':
         print(k)
 '''
-
-
+'''
 from itertools import *
 
 for i in product('0123456789ab', repeat = 6):
@@ -301,6 +300,41 @@ for i in product('0123456789ab', repeat = 6):
     if word[0] != '0' and word.count('5') == 1 and \
     da + no not in word:
         print(word)
+'''
+from itertools import*
+k = 0
+for ss, i in enumerate(product('0123456789abcde', repeat=8), 0):
+    word = ''.join(i)
+    if word[0] != '0' and word.count('0') == 2:
+        if sum(word.count(letter) for letter in 'abcde') <= 4:
+            k += 1
+            print(k)
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

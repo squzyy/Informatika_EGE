@@ -202,14 +202,25 @@ for i in open('da.txt'):
         n += 1
         print(n, a)
 '''
+'''
+—  в строке есть ровно одно число, которое повторяется трижды, и остальные числа без повторений;
 
+—  квадрат суммы всех повторяющихся чисел строки больше квадрата суммы всех неповторяющихся чисел строки.
 
+В ответе запишите только число.
+k = 0
+for i in open('da.txt'):
+    a = sorted(([int(x) for x in i.split()]))
+    da = 1
+    dva = [x for x in a if a.count(x) == 3]
+    nep = [x for x in a if a.count(x) == 1]
+    sum1 = sum(dva)
+    sum2 = sum(nep)
+    if dva and nep and sum1**2 > sum2**2:
+        k += 1
+        print(k, a)
 
-
-
-
-
-
+'''
 
 
 
