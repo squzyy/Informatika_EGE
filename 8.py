@@ -5,6 +5,11 @@
 # если мне нужно узнать не полное количество, а какое-то значение например в середине то использовать enumerate
 # all() — все элементы удовлетворяют условию, Возвращает True, если каждый элемент в последовательности истинный (или условие выполняется для всех).
 # any() — хотя бы один элемент удовлетворяет условию, Возвращает True, если хотя бы один элемент в последовательности истинный.
+#int(x, base) — заходим в любую систему, выходим с числом
+#bin() — покажи число в двоичной
+#oct() — покажи число в восьмеричной
+#hex() — покажи число в шестнадцатеричной
+#print() — покажи число в десятичной
 
 """
 from itertools import product
@@ -301,6 +306,7 @@ for i in product('0123456789ab', repeat = 6):
     da + no not in word:
         print(word)
 '''
+'''
 from itertools import*
 k = 0
 for ss, i in enumerate(product('0123456789abcde', repeat=8), 0):
@@ -309,6 +315,80 @@ for ss, i in enumerate(product('0123456789abcde', repeat=8), 0):
         if sum(word.count(letter) for letter in 'abcde') <= 4:
             k += 1
             print(k)
+'''
+'''
+from itertools import *
+k = 0
+for i in product('0123456', repeat=6):
+    word = ''.join(i)
+    da = sum(1 for d in word if d in '246') % 2 == 0 # а количество остальных чётных цифр чётно.
+    if word[0] != '0' and word.count('0') == 1 and da:
+        k += 1
+        print(k)
+'''
+"""from itertools import *
+k = 0
+for i in product('АНДРЕЙ', repeat = 6):
+    word = ''.join(i)
+    if word.count('Й') <= 1 and word[0] not in 'Й' and word[5] not in 'Й' and \
+    all(d + 'Й' not in word and 'Й' + d not in word for d in 'Е'):
+        k += 1
+    print(k, word)"""
+
+"""from itertools import *
+k = 0
+for i in product(sorted('СЛОН'), repeat = 5):
+    word = ''.join(i)
+    k += 1
+    if k == 1020:
+        print(k, word)
+"""
+
+
+
+
+from itertools import *
+k = 0
+for i in product('ПЯТНИЦА', repeat = 5):
+    word = ''.join(i)
+    if word[0] not in 'Н' and word.count('Я') == 1:
+        k += 1
+        print(k, word)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
     

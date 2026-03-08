@@ -221,6 +221,71 @@ for i in open('da.txt'):
         print(k, a)
 
 '''
+'''
+k = 0
+for i in open('da.txt'):
+    a = ([int(x) for x in i.split()])
+    da = len([x for x in a if a.count(x) == 2]) == 2 #в строке есть ровно одно число, которое повторяется дважды, а остальные числа различны;
+    net = len([x for x in a if a.count(x) == 1]) == 5 # в строке есть ровно одно число, которое повторяется дважды, а остальные числа различны;
+    if da and net and a.count(min(a)) == a.count(max(a)):
+        k += 1
+        print(k)
+'''
+
+"""k = 0
+for i in open('da.txt'):
+    a = ([int(x) for x in i.split()])
+    povt3 = [x for x in a if a.count(x) == 3]
+    povt1 = [x for x in a if a.count(x) == 1]
+    if len(povt3) == 3 and len(povt1) == 3 and len(set(a)) == 4:
+        if sum(povt1) / 3 < povt3[0]:
+            k += 1
+            print(k, a)
+        """
+
+'''k = 0
+for i in open('da.txt'):
+    a = sorted(([int(x) for x in i.split()]))
+    summa = (a[1] + a[2] + a[3])
+    if summa // a[0] >= 6 and a[3] * a[0] > (a[1] * a[2]):
+        k += 1
+        print(k, summa, a)'''
+
+"""k = 0
+for i in open('da.txt'):
+    a = sorted(([int(x) for x in i.split()]))
+    if a[0] < (a[1] + a[2]) and a[1] < (a[0] + a[2]) and a[2] < (a[0] + a[1]) or \
+    a[0] < (a[2] + a[1]) and a[1] < (a[2] + a[0]) and a[2] < (a[1] + a[0]):
+        k += 1
+        print(k, a)"""
+
+
+
+k = 0
+for i in open('da.txt'):
+    a = ([int(x) for x in i.split()])
+    min_val = min(a)
+    if a.count(min_val) == 1 and min(a) in a[:4] and \
+        (a[0] + a[1] + a[2] + a[3]) / 4 > (a[4] + a[5] + a[6] + a[7]) / 4:
+        k += 1
+        print(k, a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

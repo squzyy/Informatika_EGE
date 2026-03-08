@@ -317,14 +317,7 @@ for w in range(2):
                     print(w, x, y, z)
             
 '''
-
-
-
-
-
-
-
-
+'''
 from itertools import *
 def f(x, y, z, w):
     return ((y <= w) == (x <= (not z))) and (x or w)
@@ -338,6 +331,46 @@ for a, b in product([0, 1], repeat = 2):
         for p in permutations('xyzw', r=4):
             if all(f(**dict(zip(p, line))) == line[-1] for line in table):
                 print(*p)
+'''
+
+
+
+
+
+
+from itertools import *
+
+def f(a, b, c, d):
+    return (a <= b) and (b <= (not c)) and (c == (not d))
+for x, y, z, w in product([0, 1], repeat = 4):
+    table = (
+        (1, 1, 0, x, 1),
+        (y, 0, 1, 0, 1),
+        (1, 0, z, 1, 1),
+        (0, w, 0, 1, 1)
+    )
+    if len(table) == len(set(table)):
+        for p in permutations('abcd', r = 4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
