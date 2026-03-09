@@ -144,7 +144,7 @@ for A in range(1, 10_0000):
         break
 """
 
-import sys
+"""import sys
 sys.setrecursionlimit(2000000)
 
 def Del(n, m):
@@ -157,21 +157,36 @@ for A in range(1, 10_000):
             Da = False
             break
     if Da == True:
+        print(A)"""
+
+
+"""for A in range(1, 10000):
+    Da = True
+    for x in range(1, 10000):
+        if (((x&42 != 0) or (x&13 != 0)) <= ((x&30 == 0) <= (x&A != 0))) == 0:
+            Da = False
+            break
+    if Da == True:
         print(A)
+        break
+            """
 
 
 
 
+"""P = [i for i in range(25, 50 + 1)]
+Q = [i for i in range(32, 47 + 1)]
+
+A = [i for i in range(1, 100 + 1)]
 
 
+for x in range(1, 100 + 1):
+    if (((not(x in A)) <= (x in P)) <= ((x in A) <= (x in Q))) == 0:
+        A.remove(x)
+print(A)"""
 
-
-
-
-
-
-
-
+    
+    
 
 
 
