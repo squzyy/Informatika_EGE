@@ -344,21 +344,26 @@ for i in product(sorted('СЛОН'), repeat = 5):
         print(k, word)
 """
 
-
-
-
-from itertools import *
+"""from itertools import *
 k = 0
 for i in product('ПЯТНИЦА', repeat = 5):
     word = ''.join(i)
     if word[0] not in 'Н' and word.count('Я') == 1:
         k += 1
-        print(k, word)
+        print(k, word)"""
 
 
 
-
-
+from itertools import *
+k = 0
+for i in product('012345678', repeat = 5):
+    word = ''.join(i)
+    nechet = '1357'
+    sigma = '0'
+    if word[0] != '0' and word.count('0') == 1 and \
+    all(sigma + d not in word and d + sigma not in word for d in nechet):
+        k += 1
+        print(k, i)
 
 
 
