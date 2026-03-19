@@ -120,6 +120,20 @@ for n in range(1, 1000):
         if r > zero == 2
 '''
 
+"""def to_base7(n):
+    if n == 0:
+        return '0'
+    
+    digits = ''
+    while n > 0:
+        remainder = n % 7
+        digits += str(remainder)
+        n //= 7
+    
+    return digits[::-1]"""
 
-
+for n in range(100, 1000):
+    onetwo = [x for x in n if n[0] * n[1]]
+    print(onetwo)
+        
 

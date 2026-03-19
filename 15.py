@@ -307,7 +307,7 @@ for A in range(1, 10_000):
 
 
 
-for A in range(1, 10000):
+"""for A in range(1, 10000):
     Yes = True
     for x in range(1, 1000):
         for y in range(1, 1000):
@@ -315,4 +315,304 @@ for A in range(1, 10000):
                 Yes = False
                 break
     if Yes == True:
+        print(A)"""
+
+
+"""def Del(x, A):
+    return x % A == 0
+
+for x in range(1, 1000):
+    if (Del(x, 30) or Del(15, x)):
+        if x > 1:
+            print(x)"""
+
+
+
+"""def Del(n, m):
+    return n % m == 0
+
+B = [i for i in range(160, 180 + 1)]
+
+for A in range(1, 10000):
+    Yes = True
+    for x in range(1, 1000):
+        if not((x in B) <= (Del(x, 35) <= Del(x, A))):
+            Yes = False
+            break
+    if Yes == True:
+        print(A)"""
+
+
+"""def Del(n, m):
+    return n % m == 0
+
+B = [i for i in range(50, 70 + 1)]
+
+for A in range(1, 10_000):
+    Yes = True
+    for x in range(1, 1000):
+        if not(Del(x , A) or ((x in B) <= (not Del(x, 21)))):
+            Yes = False
+            break
+    if Yes == True:
+        print(A)"""
+
+"""for A in range(1, 1000):
+    Yes = True
+    for x in range(1, 1000):
+        for y in range(1, 1000):
+            if not((2*x + y < A) or (y > 17) or (x > y)):
+                Yes = False
+                break
+    if Yes == True and A > 0:
+        print(A)"""
+
+"""def F(m, n):
+    return m & n
+
+
+for A in range(1, 10_0000):
+    Yes = True
+    for x in range(15, 30 + 1):
+        if not((x&29 == 0) or ((x&11 == 0) <= (not(x&A == 0)))):
+            Yes = False
+            break
+    if Yes == True:
         print(A)
+        break"""
+
+
+"""P = [i for i in range(23, 45 + 1)]
+Q = [i for i in range(34, 56 + 1)]
+
+A = [i for i in range(1, 100 + 1)]
+
+
+for x in range(1, 10000):
+    if not((x not in A) or ((x not in P) and (x in Q))):
+        A.remove(x)
+print(A)"""
+
+
+"""P = [i for i in range(10, 21 + 1)]
+
+A = []
+
+for x in range(1, 10000):
+    if not((not(x in P)) or (x in A)):
+        A.append(x)
+print(A)"""
+
+
+
+"""for A in range(1, 10000):
+    Yes = True
+    for x in range(1, 1000):
+        for y in range(1, 1000):
+            if not((x * y > A) or (x > y) or (11 > x)):
+                Yes = False
+                break
+    if Yes == True:
+        print(A)"""
+
+"""P = [i for i in range(19, 142 + 1)]
+Q = [i for i in range(75, 182 + 1)]
+
+A = []
+
+for x in range(1, 1000):
+    if (not((x in Q) <= ((not(x in A)) and (x in P) <= (not(x in Q))))):
+        A.append(x)
+print(A)"""
+
+
+
+
+
+
+
+"""P = (2, 4, 6, 8, 10, 12, 14, 16, 18, 20)
+Q = (5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
+
+A = [i for i in range(1, 100+1)]
+
+for x in range(1, 100+1):
+    if not(((x in A) <= (x in P)) and ((x in Q) <= (not(x in A)))):
+        A.remove(x)
+print(A)
+"""
+
+
+"""P = (12, 14, 19, 20, 25)
+Q = (13, 18, 19, 20 , 30)
+
+A = [i for i in range(1, 100+1)]
+
+for x in range(1, 100+1):
+    if not((not((x in P) == (x in A))) <= ((x in Q) ==(x in A))):
+        A.remove(x)
+print(A)
+
+print(12*13*14*18*19*20*25*30)"""
+
+"""def Del(n, m):
+    return n % m == 0
+
+for A in range(1, 10000):
+    Yes = True
+    for x in range(1, 1000):
+        if not((not(Del(x, 3) and Del(x, 5))) or (A >= 42 - x)):
+            Yes = False
+            break
+    if Yes == True:
+        print(A)
+        break"""
+
+"""def F(M, K):
+    return M&K
+
+for A in range(1, 10000):
+    Yes = True
+    for x in range(1, 1000):
+        if (((x&17 != 0) <= ((x&A != 0) <= (x&58 != 0))) <= ((x&8 == 0) and (x&A != 0) and (x&58 == 0))) == 1:
+            Yes = False 
+    if Yes == True:
+        print(A)
+        break"""
+
+
+
+
+"""def Del(n, m):
+    return n % m == 0
+
+for A in range(1, 10_000):
+    da = True
+    for x in range(1, 1000):
+        if not((not(Del(x, 3) and Del(x, 5))) or (A >= 42 - x)):
+            da = False
+            break
+    if da == True:
+        print(A)
+        break"""
+
+"""for A in range(1, 1000):
+    da = True
+    for x in range(1, 1000):
+        for y in range(1, 1000):
+            if not((2*x + y < A) or (y > 17) or (x > y)):
+                da = False
+                break
+    if da == True:
+        print(A)
+        break"""
+
+"""
+P = (-42, -10, -8, 2, 16)
+Q = (-10, -4, 2, 15, 23)
+
+A = [i for i in range(1, 100 + 1)]
+
+for x in range(1, 100 + 1):
+    if not(((x in A) <= (x in P)) or (x in Q)):
+        A.remove(x)
+print(sum(A))
+"""
+
+"""
+P = [i for i in range(23, 58 + 1)]
+Q = [i for i in range(1, 39 + 1)]
+
+A = []
+
+for x in range(1, 100 + 1):
+    if not(((x in P) or (x in A)) <= ((x in Q) or (x in A))):
+        A.append(x)
+print(A)"""
+
+
+"""for A in range(1, 1000):
+    da = True
+    for x in range(1, 1000):
+        for y in range(1, 1000):
+            if not((x * y < A) or (x < y) or (x >= 12)):
+                da = False
+                break
+    if da == True:
+        print(A)
+        break"""
+
+
+"""def Del(n, m):
+    return n % m == 0
+
+for A in range(1, 10_000):
+    da = True
+    for x in range(1, 10_000):
+        if not((Del(72, x) <= (not Del(120, x))) or (A - x > 100)):
+            da = False
+            break
+    if da == True:
+        print(A)
+        break"""
+
+
+"""for A in range(1, 1000):
+    da = True
+    for x in range(1, 1000):
+        for y in range(1, 1000):
+            if not((2*x + 3*y < A) or (x > y) or (y > 24)):
+                da = False
+                break
+    if da == True:
+        print(A)
+        break"""
+
+
+"""def F(m, n):
+    return m & n
+
+for A in range(1, 10_0000):
+    da = True
+    for x in range(1, 10_0000):
+        if not ((x&25 != 0) <= ((x&19 == 0) <= (x&A != 0))):
+            da = False
+            break
+    if da == True:
+        print(A)
+        break"""
+
+"""P = [i for i in range(22, 72 + 1)]
+Q = [i for i in range(42, 102 + 1)]
+
+A = []
+
+for x in range(1, 100+1):
+    if not ((not((not(x in A)) and (x in P))) or (x in Q)):
+        A.append(x)
+print(len(A))"""
+
+"""def Del(n, m):
+    return n % m == 0
+
+for A in range(1, 10_000):
+    da = True
+    for x in range(1, 10_000):
+        if not((not Del(x,A)) <= (not(Del(x, 21)) and (not Del(x, 35)))):
+            da = False
+            break
+    if da == True:
+        print(A)"""
+        
+
+
+P = [i for i in range(7, 63 + 1)]
+Q = [i for i in range(28, 99 + 1)]
+R = [i for i in range(85, 119 + 1)]
+
+A = []
+
+for x in range(1, 200 + 1):
+    if not((x in Q) <= ((not(x in P)) <= (((not(x in R)) and (not(x in A))) <= (not(x in Q))))):
+        A.append(x)
+print(len(A))

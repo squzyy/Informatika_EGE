@@ -104,6 +104,216 @@ print(k)
 
 
 
+"""size = 3000
+
+F = [0] * (size + 1)
+
+
+for n in range(size, 19, -1):
+    if n >= 2025:
+        F[n] = 1
+    else:
+        F[n] = (n - F[n+2]) - F[n+4]
+
+res = F[20] + F[25]
+print(res)"""
+
+"""
+если inf то:
+from sys import *
+from decimal import *
+setrecursionlimit(1000000)
+
+# Устанавливаем высокую точность
+getcontext().prec = 10000
+
+def F(n):
+    if n <= 1:
+        return Decimal(1)
+    if n > 1 and n % 2 == 0:
+        return F(n-1) / Decimal(3)
+    if n > 1 and n % 2 != 0:
+        return Decimal(6) * F(n-1)
+
+yes = F(2049)
+no = F(2046)
+print(float(yes / no))"""
+
+"""from sys import *
+from decimal import *
+
+getcontext().prec = 10000
+
+
+def F(n):
+    if n >= 2025:
+        return Decimal(n)
+    if n < 2025:
+        return Decimal(n) + Decimal(3) + F(n+3)
+
+da = F(23)
+net = F(21)
+print(float(da - net))"""
+
+"""from sys import *
+from decimal import *
+setrecursionlimit(1000000)
+getcontext().prec = 10000
+
+
+def F(n):
+    if n < 4:
+        return Decimal(3)
+    if n > 3:
+        return Decimal(3) * F(n - 3)
+
+da = F(3333)
+net = F(3300)
+print(float(da/net))"""
+
+
+"""from sys import *
+from decimal import *
+
+setrecursionlimit(100000)
+getcontext().prec = 10000
+
+def F(n):
+    if n > 10000:
+        return Decimal(42)
+    if n <= 10_000 and n % 2 == 0:
+        return Decimal(2) * Decimal(n) + F(n + 3) + F(n + 4) + F(n + 6)
+    if n <= 10_000 and n % 2 != 0:
+        return -(Decimal(n) + F(n + 1) + F(n+3))
+    
+da = F(9996) - F(9994)
+print(float(da))"""
+
+
+
+
+"""from sys import *
+from decimal import *
+
+setrecursionlimit(100000)
+getcontext().prec = 10000
+
+def F(n):
+    if n <= 100:
+        return Decimal(3.14**n)
+    if n > 100 and n % 2 == 0:
+        return F(n - 1) + Decimal(n**2)
+    if n > 100 and n % 2 != 0:
+        return Decimal(2) * F(n - 2)
+da = F(298) - Decimal(2) * F(295)
+print(float(da))
+    """
+
+"""from sys import *
+from decimal import *
+
+setrecursionlimit(10020)
+getcontext().prec = 10000
+
+def F(n):
+    if n >= 10_000:
+        return Decimal(1)
+    if n < 10_000 and n % 2 == 0:
+        return F(n + 3) + Decimal(7)
+    if n < 10_000 and n % 2 != 0:
+        return F(n + 1) - Decimal(3)
+da = F(50) - F(57)
+print(float(da))"""
+
+"""from sys import *
+from decimal import *
+
+setrecursionlimit(100000)
+getcontext().prec = 10000
+def F(n):
+    if n  == 1:
+        return Decimal(1)
+    if n == 2:
+        return Decimal(1)
+    if n > 2:
+        return F(n - 2) * (n + 1)
+da = F(8)
+print(float(da))"""
+
+
+
+"""from sys import *
+from decimal import *
+
+setrecursionlimit(100000)
+getcontext().prec = 10000
+
+def F(n):
+    if n == 1:
+        return Decimal(1)
+    if n > 1 and n % 2 != 0:
+        return Decimal(n) + F(n - 2)
+    if n % 2 == 0:
+        return Decimal(n) * F(n - 1)
+da = F(40)
+print(float(da))"""
+
+
+
+"""from sys import *
+
+setrecursionlimit(100_000)
+
+def F(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 2
+    if n > 2 and n % 2 == 0:
+        return (4 * n - F(n-3))//8
+    if n > 2 and n % 2 != 0:
+        return (4 * n - F(n-1) + F(n-2))//8
+da = F(52)-F(38)
+print(da)"""
+
+
+"""from sys import *
+from decimal import *
+getcontext().prec = 10000
+setrecursionlimit(10_0000)
+
+def F(n):
+    if n == 1:
+        return Decimal(n)
+    if n > 1:
+        return Decimal(n) - 1 + F(n - 1)
+da = F(2024) - F(2022)
+print(float(da))"""
+
+
+from sys import *
+
+setrecursionlimit(100000)
+
+def Yes(a, b):
+    return a % b and a // b
+
+def F(n):
+    if n == 0:
+        return 0
+    if n > 0 and n % 2 == 0:
+        return F(n//10) + n % 10
+    if n % 2 != 0:
+        return F(n//10)
+
+s = 0
+
+for k in range(10**9, 2 * 10**9):
+    if F(k) == 2:
+        s += 1
+print(s)
+        
+     
 
 
 
@@ -111,11 +321,4 @@ print(k)
 
 
 
-
-
-
-
-
-
-
-
+    

@@ -206,7 +206,7 @@ for i in range(len(a) - 1):
 '''
 
 
-a = [int(x) for x in open('17.txt')]
+"""a = [int(x) for x in open('17.txt')]
 
 # количество чисел, кратных 5
 count5 = sum(1 for x in a if x % 5 == 0)
@@ -219,8 +219,63 @@ for i in range(len(a) - 1):
             sums.append(s)
 
 print(len(sums), max(sums))
+        """
+
+"""a = []
+for i in open('17.txt'):
+    a.append(int(i))
+
+mx = max([i for i in a if i % 100 == 42])
+otv = []
+for i in range(len(a) - 2):
+    k = 0
+    for j in range(3):
+        if 99 < a[i+j] < 1000:
+            k += 1
+            da = a[i + j]
+    if k == 1 and da % 10 == 9:
+        if (a[i] + a[i+1] + a[i+2]) > mx:
+            otv.append(a[i] + a[i+1] + a[i+2])
+print(len(otv), max(otv))
+"""
         
-
     
+"""a = []
 
-    
+for i in open('17.txt'):
+    a.append(int(i))
+
+mn = min([i for i in a if 99 < i < 1000 and i % 10 == 7])
+
+otv = []
+for i in range(len(a) - 1):
+    if ((99 < a[i] < 1000) + (99 < a[i+1] < 1000)) == 1:
+        if (a[i] + a[i+1]) % mn == 0:
+            otv.append(a[i] + a[i+1])
+print(len(otv), min(otv))"""
+
+"""
+a = []
+for i in open('17.txt'):
+    a.append(int(i))
+
+mx = max([i for i in a if 999 < abs(i) < 10_000])
+otv = []
+for i in range(len(a) - 1):
+    if abs(a[i] - a[i+1]) >= mx:
+        otv.append(a[i] + a[i+1])
+print(len(otv), max(otv))"""
+
+
+
+a = []
+for i in open('17.txt'):
+    a.append(int(i))
+otv = []
+
+for i in range(len(a) - 1):
+    da = sum([x for x in a if (a[i] % 3 == 0) or (a[i+1] % 3 == 0)])
+    if da:
+        otv.append(a[i] + a[i+1])
+print(len(otv), max(otv))
+        
