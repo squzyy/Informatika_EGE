@@ -606,7 +606,7 @@ for A in range(1, 10_000):
         
 
 
-P = [i for i in range(7, 63 + 1)]
+"""P = [i for i in range(7, 63 + 1)]
 Q = [i for i in range(28, 99 + 1)]
 R = [i for i in range(85, 119 + 1)]
 
@@ -615,4 +615,4 @@ A = []
 for x in range(1, 200 + 1):
     if not((x in Q) <= ((not(x in P)) <= (((not(x in R)) and (not(x in A))) <= (not(x in Q))))):
         A.append(x)
-print(len(A))
+print(len(A))"""

@@ -268,7 +268,7 @@ print(len(otv), max(otv))"""
 
 
 
-a = []
+"""a = []
 for i in open('17.txt'):
     a.append(int(i))
 otv = []
@@ -277,5 +277,177 @@ for i in range(len(a) - 1):
     da = sum([x for x in a if (a[i] % 3 == 0) or (a[i+1] % 3 == 0)])
     if da:
         otv.append(a[i] + a[i+1])
-print(len(otv), max(otv))
+print(len(otv), max(otv))"""
+
+
+
+"""a = []
+for i in open('17.txt'):
+    a.append(int(i))
+res = []
+for i in range(len(a) - 1):
+    if (a[i] + a[i+1]) % 2 == 0: # количество пар чисел с одинаковой чётностью
+        res.append(a[i] + a[i+1])
+print(len(res))"""
+
+
+"""a = []
+for i in open('17.txt'):
+    a.append(int(i))
+# Находим два наибольших элемента
+sorted_a = sorted(a, reverse=True)
+max_product = sorted_a[0] * sorted_a[1]
+
+otv = []
+
+for i in range(len(a) - 2):
+    # Проверяем, что ровно одно положительное
+    positive_count = (a[i] > 0) + (a[i+1] > 0) + (a[i+2] > 0)
+    if positive_count == 1:
+        product = a[i] * a[i+1] * a[i+2]
+        if product <= max_product:
+            otv.append(a[i] + a[i+1] + a[i+2])
+
+print(len(otv), max(otv))"""
+
+"""a = []
+for i in open('17.txt'):
+    a.append(int(i))
+
+da = [i for i in a if i % 11 == 0]
+da_1 = sum(da) / len(da)
+otv = []
+
+for i in range(len(a) - 2):
+    triplet = [a[i], a[i+1], a[i+2]]
+    triplet_sum = sum(triplet)
+    
+    if any(abs(x) % 100 == 11 for x in triplet) and (triplet_sum / 3) > da_1:
+        otv.append(triplet_sum)
+
+print(len(otv), max(otv))"""
+
+
+
+"""a = []
+for i in open('17.txt'):
+    a.append(int(i))
+
+mn = [i for i in a if 9 < abs(i) < 100 and abs(i) % 10 == 1]
+mn_da = min(mn)
+mn_de = mn_da ** 2
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if (x*x < mn_de) ^ (y*y < mn_de):
+        if x + y >= 0:
+            otv.append(x + y)
+print(len(otv), min(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if i >= 0 and i % 35 == 0])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if x != y and (x - y) % mn == 0:
+        otv.append(x + y)
+print(len(otv), max(otv))"""
         
+"""a = [int(i) for i in open('17.txt')]
+
+da = sum(1 for i in a if abs(i) < 100)
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    das = x + y
+    if das / 2 > da:
+        otv.append(x + y)
+print(len(otv), max(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mx = max([i for i in a if i % 17 == 0])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if (x + y) > mx:
+        otv.append(x+y)
+print(len(otv), max(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mx = max([i for i in a if 999 < abs(i) < 10000])
+
+otv = []
+for i in range(len(a)- 1):
+    x, y = a[i], a[i+1]
+    if abs(x - y) >= mx:
+        otv.append(x + y)
+print(len(otv), max(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+
+mx = max([abs(i) for i in a if i % 1001 == 0])
+
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    pos = (99 < abs(x) < 1000) or (99 < abs(y) < 1000)
+    if pos:
+        if (x + y) > mx:
+            otv.append(x + y)
+print(len(otv), min(otv))"""
+
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if 99 < i < 1000 and i % 10 == 5])
+
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    pos = (99 < x < 1000) or (99 < y < 1000)
+    if pos:
+        if (x + y) % mn == 0:
+            otv.append(x + y)
+print(len(otv), max(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if i % 21 == 0])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if x % mn == 0 or y % mn == 0:
+        otv.append(x + y)
+print(len(otv), max(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if (99 < i < 1000) and i % 45 == 0])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if (999 < x < 10000) or (999 < y < 10000):
+        if (x + y) % mn == 0:
+            otv.append(x + y)
+print(len(otv), min(otv))"""
+
+a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if i % 25 == 0])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if x % 2 == 0 or y % 2 == 0:
+        if (x + y) % mn == 0:
+            otv.append(x + y)
+        
+print(len(otv), max(otv))

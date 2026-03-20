@@ -291,7 +291,7 @@ da = F(2024) - F(2022)
 print(float(da))"""
 
 
-from sys import *
+"""from sys import *
 
 setrecursionlimit(100000)
 
@@ -311,12 +311,22 @@ s = 0
 for k in range(10**9, 2 * 10**9):
     if F(k) == 2:
         s += 1
-print(s)
+        print(s)"""
         
      
 
+from sys import *
+setrecursionlimit(100000)
 
-
+def F(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    if n > 2:
+        return F(n - 2) * n
+da = F(7)
+print(da)
 
 
 

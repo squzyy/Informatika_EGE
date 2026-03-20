@@ -132,8 +132,71 @@ for n in range(1, 1000):
     
     return digits[::-1]"""
 
-for n in range(100, 1000):
-    onetwo = [x for x in n if n[0] * n[1]]
-    print(onetwo)
-        
+"""n = [x for x in range(100, 1000)]
+
+for i in n:
+    onetwo = [x for x in n if n[] * n[1:]]
+    twothree = [x for x in n if n[2:] * n[1:]]
+    if onetwo > twothree:
+        list(onetwo) + list(twothree)
+    else:
+        list(twothree) + list(onetwo)
+        print(onetwo)   """
+
+"""def to_4(n):
+    n4 = ''
+    while n > 0:
+        n4 += str(n % 3)
+        n //= 3
+    return n4[::-1] 
+
+for n in range(1, 1000):
+    n4 = to_4(n)
+    r = n4
+    if n % 3 == 0:
+        r = r + r[-3:]
+    else:
+        d = n % 3
+        d * 3
+        d = to_4
+    j = int(n, 3)
+    print(j)
+"""
+
+"""a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    summa = r.count('1')
+    if summa % 2 == 0:
+        r2 = r + '0'
+        r3 = '10' + r2[2:]
+    else:
+        r2 = r + '1'
+        r3 = '11' + r2[2:]
+    R = int(r3, 2)
+    if R > 30:
+        a.append(n)
+print(min(a))"""
+    
+    
+
+res = []
+for n in range(1, 1000):
+    r = oct(n)[2:]
+    nechet = 0
+    for d in r:
+        if int(d) % 2 == 0:
+            nechet += 1
+    if nechet % 2 == 1:
+            da = r[-3:] + '46'
+    else:
+        ost = n % 8
+        proizv = ost * 5
+        proizv_vs = oct(proizv)[2:]
+        da = proizv_vs + r
+    R = int(da, 8)
+    res.append(R)
+minim = min(res)
+print(minim)
+
 
