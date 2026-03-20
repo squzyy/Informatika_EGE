@@ -440,7 +440,7 @@ for i in range(len(a) - 1):
             otv.append(x + y)
 print(len(otv), min(otv))"""
 
-a = [int(i) for i in open('17.txt')]
+"""a = [int(i) for i in open('17.txt')]
 
 mn = min([i for i in a if i % 25 == 0])
 otv = []
@@ -450,4 +450,29 @@ for i in range(len(a) - 1):
         if (x + y) % mn == 0:
             otv.append(x + y)
         
+print(len(otv), max(otv))"""
+
+"""a = [int(i) for i in open('17.txt')]
+
+mx = sorted(a, reverse=True)
+md = mx[0] * mx[1]
+otv = []
+for i in range(len(a) - 2):
+    x, y, z = a[i], a[i+1], a[i+2]
+    if ((x >= 0) + (y >= 0) + (z >= 0)) == 1:
+        if x * y * z < md:
+            otv.append(x + y + z)
+print(len(otv), max(otv))"""
+
+
+a = [int(i) for i in open('17.txt')]
+mx = max([i for i in a if i % 256 == 15])
+
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if (x % 7 == 0) != (y % 7 == 0):
+        if (x + y) % mx == 0:
+            otv.append(x + y)
+
 print(len(otv), max(otv))
