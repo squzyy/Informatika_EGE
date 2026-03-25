@@ -315,7 +315,7 @@ for k in range(10**9, 2 * 10**9):
         
      
 
-from sys import *
+"""from sys import *
 setrecursionlimit(100000)
 
 def F(n):
@@ -326,9 +326,18 @@ def F(n):
     if n > 2:
         return F(n - 2) * n
 da = F(7)
-print(da)
+print(da)"""
 
 
 
 
     
+def F(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    if n > 2:
+        return F(n-2) * (n + 1)
+da = F(8)
+print(da)

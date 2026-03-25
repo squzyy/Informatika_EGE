@@ -261,14 +261,14 @@ for i in open('da.txt'):
 
 
 
-k = 0
+"""k = 0
 for i in open('da.txt'):
     a = ([int(x) for x in i.split()])
     min_val = min(a)
     if a.count(min_val) == 1 and min(a) in a[:4] and \
         (a[0] + a[1] + a[2] + a[3]) / 4 > (a[4] + a[5] + a[6] + a[7]) / 4:
         k += 1
-        print(k, a)
+        print(k, a)"""
 
 
 
@@ -277,10 +277,15 @@ for i in open('da.txt'):
 
 
 
-
-
-
-
+ss = []
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    to_3 = [x for x in a if a.count(x) == 3]
+    to_1 = [x for x in a if a.count(x) == 1]
+    if len(to_3) == 3 and len(to_1) == 4:
+        if ((sum(to_1)) / 4) <= to_3[0]:
+            ss.append(a)
+print(sum(ss[-1]))
 
 
 

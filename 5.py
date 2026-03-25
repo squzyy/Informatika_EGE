@@ -180,7 +180,7 @@ print(min(a))"""
     
     
 
-res = []
+"""res = []
 for n in range(1, 1000):
     r = oct(n)[2:]
     nechet = 0
@@ -197,6 +197,95 @@ for n in range(1, 1000):
     R = int(da, 8)
     res.append(R)
 minim = min(res)
-print(minim)
+print(minim)"""
+"""a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    summa = r.count('1')
+    sisi = summa % 2
+    r = r + str(sisi)
+    summa2 = r.count('1')
+    sisi2 = summa % 2
+    r = r + str(sisi2)
+    if int(r, 2) <= 120:
+        a.append(n)
+print(max(a))"""
+
+"""a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    nol = r.count('0')
+    nenol = r.count('1')
+    if nol > nenol:
+        r = '10' + r[2:] + '0'
+    else:
+        r = '1' + r[:-2] + '10'
+    if int(r, 2) >= 98:
+        a.append(n)
+print(min(a))"""
+
+"""def to_3(n):
+    s = ''
+    while n > 0:
+        s = str(n % 3) + s
+        n //= 3
+    return s
+a = []
+for n in range(1, 1000):
+    r = to_3(n)
+    if n % 3 == 0:
+        r = r + r[-2:]
+    else:
+        r = r + to_3((n % 3) * 5)
+    R = int(r, 3)
+    if R >= 213:
+        a.append(R)
+print(min(a))"""
+
+"""a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    if n % 2 == 0:
+        r = r + '10'
+    else:
+        r = '1' + r and r + '1'
+    R = int(r, 2)
+    if 9 < R < 100:
+        a.append(n)
+print(min(a))"""
+
+# print(n2[:len(n2) // 2]) - до середины, print(n2[len(n2) // 2:]) - после середины
+'''a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    if len(r) % 2 == 0:
+        r = r[len(r) // 2:] + r[:len(r) // 2]
+    R = int(r, 2)
+    if R <= 26:
+        a.append(n)
+print(max(a))'''
+"""a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    if r.count('1') % 2 == 0:
+        r = r + '1' and r + '10'
+    else:
+        r = '01' + r + '0' and r + '01'
+    R = int(r, 2)
+    if R < 1000 and n % 7 == 0:
+        a.append(R)
+print(max(a))"""
 
 
+a = []
+for n in range(100 + 1, 1000):
+    r = hex(n)[2:]
+    r.replace('b', '2')
+    d = "123456789ABCDEF"
+    if len([x for x in r if x in '13579bdf']) > 2:
+        r = r + 'e'
+    else:
+        r = 'f' + r
+    if int(r, 16) > 4001:
+        a.append([int(r, 16), n])
+print(sorted(max(a)))

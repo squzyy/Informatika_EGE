@@ -354,7 +354,7 @@ for i in product('ПЯТНИЦА', repeat = 5):
 
 
 
-from itertools import *
+"""from itertools import *
 k = 0
 for i in product('012345678', repeat = 5):
     word = ''.join(i)
@@ -364,32 +364,128 @@ for i in product('012345678', repeat = 5):
     all(sigma + d not in word and d + sigma not in word for d in nechet):
         k += 1
         print(k, i)
+"""
+
+"""from itertools import *
+k = 0
+for i in product('ДЕМЬЯН', repeat=6):
+    s = ''.join(i)
+    if (s.count('Д') and s.count('Е') and s.count('М') and s.count('Ь') and s.count('Я') and s.count('Н')) == 1 and \
+    s[0] != 'Ь' and ('ЕЬ' not in s and 'ЯЬ' not in s):
+        k += 1
+        print(k, s)
+"""
+"""from itertools import *
+k = 0
+for i in product('ABCDXY', repeat=4):
+    s = ''.join(i)
+    if s[0] == 'X' or s[0] == 'Y':
+        if all(d not in 'XY' for d in s[1:]):
+            k += 1        
+            print(k, s)"""
+
+
+"""from itertools import *
+
+for k, i in enumerate(product(sorted('ЛЕМУР'), repeat = 4), 0):
+    s = ''.join(i)
+    if s[0] == 'Л':
+        k += 1
+        print(k, s)"""
+
+"""from itertools import *
+k = 0
+for i in product('0123456789ab', repeat = 5):
+    s = ''.join(i)
+    pizda = [d for d in s if d in '02468a']
+    nepizda = [g for g in s if g in '13579b']
+    if s[0] != '0' and  len(pizda) == 3 and len(set(pizda)) == 1:
+        da = pizda[0]
+        if da * 3 in s:
+            k += 1
+print(k)"""
+
+"""from itertools import *
+k = 0
+for i in product('РОСОМАХА', repeat=8):
+    s = ''.join(i)
+    if sand(s.count('Р') == 1 and s.count('О') == 2 and s.count('С') == 1 and s.count('М') == 1 and s.count('А') == 2 and s.count('Х') == 1) and \
+    ('О' + 'О') not in s and ('О' + 'А') not in s and ('А' + 'А') not in s and ('А' + 'О') not in s and \
+    ('Р' + 'Р') not in s and ('Р' + 'С') not in s and ('С' + 'Р') not in s and \
+    ('Р' + 'М') not in s and ('М' + 'Р') not in s and \
+    ('Р' + 'Х') not in s and ('Х' + 'Р') not in s and \
+    ('С' + 'С') not in s and ('С' + 'М') not in s and ('М' + 'С') not in s and \
+    ('С' + 'Х') not in s and ('Х' + 'С') not in s and \
+    ('М' + 'М') not in s and ('М' + 'Х') not in s and ('Х' + 'М') not in s and \
+    ('Х' + 'Х') not in s:
+        k += 1
+print(k)"""
+    
+"""from itertools import *
+k = 0
+for i in product('АНЮШК', repeat=5):
+    s = ''.join(i)
+    if s.count('А') >= 3:
+        k += 1
+        print(k, s)"""
+
+"""from itertools import *
+k = 0
+for i in product('ДАНИЛ', repeat = 6):
+    s = ''.join(i)
+    if s.count('Д') == 1 and s.count('А') == 1 and s[-1] not in 'А':
+        k += 1
+        print(k, s)"""
+
+"""from itertools import *
+
+k = 0
+for i in permutations('0123456', 6):
+    s = ''.join(i)
+    chet = '0246'
+    nechet = '135'
+    for j in range(len(s) - 1):
+        da = True
+        if not((s[j] in chet) != (s[j+1] in chet)):
+            da = False
+            break
+    for h in range(len(s) - 1):
+        ga = True
+        if not((s[h] in nechet) != (s[h+1] in nechet)):
+            ga = False
+            break
+    if s[0] != '0' and da == True and ga == True:
+        k += 1
+print(k)"""
+
+
+"""k = set()
+from itertools import *
+for i in permutations('ДАНИССИМО', 9):
+    s = ''
+print(len(k))"""
 
 
 
+"""from itertools import *
+k = 0
+for i in product('АЛЕКСЙ', repeat = 6):
+    s = ''.join(i)
+    if s.count('Й') <= 1 and ('Й' + 'А') not in s and ('А' + 'Й') not in s and \
+    s[0] != 'Й' and s[-1] != 'Й':
+        k += 1
+        print(k, s)
+"""
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+"""from itertools import *
+k = set()
+for i in permutations('ДЫНЬКА'):
+    s = ''.join(i)
+    if s[0] != 'Ь' and ('Ы' + 'Ь') not in s and \
+    ('А' + 'Ь') not in s:
+        k.add(''.join(i))
+print(len(k))"""
 
 
 
