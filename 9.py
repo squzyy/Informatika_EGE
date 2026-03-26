@@ -271,13 +271,7 @@ for i in open('da.txt'):
         print(k, a)"""
 
 
-
-
-
-
-
-
-ss = []
+"""ss = []
 for i in open('9.txt'):
     a = [int(x) for x in i.split()]
     to_3 = [x for x in a if a.count(x) == 3]
@@ -285,10 +279,19 @@ for i in open('9.txt'):
     if len(to_3) == 3 and len(to_1) == 4:
         if ((sum(to_1)) / 4) <= to_3[0]:
             ss.append(a)
-print(sum(ss[-1]))
+print(sum(ss[-1]))"""
 
 
+k = 0
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    if (a[0] == 90 and a[1] + a[-1] == 90) or \
+    (a[1] == 90 and a[0] + a[-1] == 90) or \
+    (a[-1] == 90 and a[0] + a[1] == 90):
+        k += 1
+print(k)
 
+    
 
 
 
