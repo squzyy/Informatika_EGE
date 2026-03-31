@@ -186,3 +186,4 @@ for ip in net:
     s = bin(int(ip))[2:].zfill(32)
     if s[-8:].count('0') % 3 != 0:
         k += 1
+        print(k)
