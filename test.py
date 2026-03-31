@@ -42,7 +42,7 @@ print(f"Двоичная запись: {bin(number)[2:]}")
 print(f"Результат: {result}")"""
 
 
-"""import turtle
+import turtle
 pp=turtle.Turtle()
 p=turtle.getscreen()
 p.bgcolor('white')
@@ -84,4 +84,4 @@ pp.fd(100)
 pp.left(60)
 pp.fd(15)
 pp.hideturtle()
-turtle.mainloop()"""
+turtle.mainloop()
