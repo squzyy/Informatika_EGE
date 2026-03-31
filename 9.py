@@ -282,34 +282,116 @@ for i in open('9.txt'):
 print(sum(ss[-1]))"""
 
 
-k = 0
+'''k = 0
 for i in open('9.txt'):
     a = [int(x) for x in i.split()]
     if (a[0] == 90 and a[1] + a[-1] == 90) or \
     (a[1] == 90 and a[0] + a[-1] == 90) or \
     (a[-1] == 90 and a[0] + a[1] == 90):
         k += 1
+print(k)'''
+
+'''k = 0  
+for i in open('9.txt'):
+    a = sorted([int(x) for x in i.split()])
+    if abs(((a[-1]) - (a[0])) ** 3) <= ((a[1] + a[2]) ** 2):
+        k += 1
+        print(k, a)
+print(k)'''
+        
+"""k = 0
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    to_3 = [x for x in a if a.count(x) == 3]
+    to_1 = [x for x in a if a.count(x) == 1]
+    if len(to_3) == 3 and len(to_1) == 3:
+        if sum(to_1) * 3 <= sum(to_3) * 10:
+            k += 1
+            print(k, a)
 print(k)
+"""
+"""k = 0
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    to_3 = [x for x in a if a.count(x) == 3]
+    to_1 = [x for x in a if a.count(x) == 1]
+    if len(to_3) == 3 and len(to_1) == 3:
+        if sum(to_3) ** 2 > sum(to_1) ** 2:
+            k += 1
+            print(k, a)
+print(k)
+ """
 
-    
+"""k = 0
+for i in open('9.txt'):
+    a = sorted([int(x) for x in i.split()])
+    if a[-1] < (a[0] + a[1] + a[2]):
+        if (a[0] + a[1] == a[2] + a[-1]) or \
+        (a[0] + a[2] == a[1] + a[-1]) or \
+        (a[0] + a[-1] == a[1] + a[2]):
+            k += 1
+            print(k, a)
+print(k)
+"""
 
 
+"""k = 0
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    to_2 = [x for x in a if a.count(x) == 2]
+    to_1 = [x for x in a if a.count(x) == 1]
+    if len(to_2) == 4 and len(to_1) == 3:
+        if (sum(to_2) / 4) < (sum(a) / 7):
+            k += 1
+            print(a)
+print(k)"""
 
+"""k = 0
+for i in open('9.txt'):
+    a = ([int(x) for x in i.split()])
+    to_2 = [x for x in a if a.count(x) == 2]
+    to_1 = sorted([x for x in a if a.count(x) == 1])
+    if len(to_2) == 2 and len(to_1) == 5:
+        if (to_1[0] * to_1[1] * to_1[2]) > to_2[0] ** 2:
+            k += 1
+            print(k, a)
+print(k)
+"""
+"""k = 0
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    to_2 = sorted([x for x in a if a.count(x) == 2])
+    to_1 = sorted([x for x in a if a.count(x) == 1])
+    if len(to_2) == 2 and len(to_1) == 2:
+        if (((to_1[0] % 2 != 0) and (to_1[-1] % 2 != 0))) and ((to_2[0] % 2) == 0):
+            k += 1
+            print(to_1)
+print(k)"""
 
+"""k = 0
+for i in open('9.txt'):
+    a = [int(x) for x in i.split()]
+    to_2 = [x for x in a if a.count(x) == 2]
+    to_1 = [x for x in a if a.count(x) == 1]
+    if len(to_2) == 2 and len(to_1) == 5:
+        if sum(1 for d in a if d == max(a)) == sum(1 for d in a if d == min(a)):
+            k += 1
+            print(a)
+print(k)"""
 
+s = []
+k = 1
+for i in open('9.txt'):
+    a = sorted([int(x) for x in i.split()])
+    chet = sum(1 for d in a if d % 2 == 0)
+    nchet = sum(1 for d in a if d % 2 != 0)
+    if chet == nchet:
+        if a[0] + a[5] == a[1] + a[4] == a[2] + a[3]:
+            s.append(k)
+    k += 1
+print(max(s))
 
-
-
-
-
-
-
-
-
-
-
-
-
+                
 
 
 

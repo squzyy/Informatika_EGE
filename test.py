@@ -21,7 +21,7 @@ print(numbers)         # [5, 2, 8, 1, 9] - исходный не изменил�
 
 """fruits = sorted(['dobley', 'apple'])
 print(fruits)"""
-def process_number(n):
+"""def process_number(n):
     # Получаем двоичную запись числа (без префикса '0b')
     binary = bin(n)[2:]
     
@@ -39,4 +39,49 @@ number = 21  # 21 кратно 3 (21 = 3 * 7)
 result = process_number(number)
 print(f"Исходное число: {number}")
 print(f"Двоичная запись: {bin(number)[2:]}")
-print(f"Результат: {result}")
+print(f"Результат: {result}")"""
+
+
+"""import turtle
+pp=turtle.Turtle()
+p=turtle.getscreen()
+p.bgcolor('white')
+pp.pensize(12)
+pp.pencolor('black')
+pp.left(90)
+pp.fd(100)
+pp.right(90)
+pp.fd(100)
+pp.left(60)
+pp.fd(15)
+pp.back(15)
+pp.right(60)
+pp.back(100)
+pp.left(90)
+pp.back(200)
+pp.left(90)
+pp.fd(100)
+pp.left(60)
+pp.fd(15)
+pp.back(15)
+pp.right(60)
+pp.back(100)
+pp.right(90)
+pp.fd(100)
+pp.left(90)
+pp.fd(100)
+pp.right(90)
+pp.fd(100)
+pp.left(60)
+pp.fd(15)
+pp.back(15)
+pp.right(60)
+pp.back(100)
+pp.left(90)
+pp.back(200)
+pp.left(90)
+pp.fd(100)
+pp.left(60)
+pp.fd(15)
+pp.hideturtle()
+turtle.mainloop()"""

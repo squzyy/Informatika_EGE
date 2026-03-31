@@ -617,13 +617,35 @@ for x in range(1, 200 + 1):
         A.append(x)
 print(len(A))"""
 
-
-
-for A in range(1, 1000):
+"""for A in range(1, 1000):
     yes = True
     for x in range(1, 1000):
         for y in range(1, 1000):
             if not(((y +3*x )> A) or (x < 20) or (y < 50)):
                 yes = False
     if yes:
+        print(A)"""
+
+
+"""def F(n, m):
+    return n & m
+
+for A in range(1, 10000):
+    yes = True
+    for x in range(1, 10000):
+        if not(((x&116 != 0) or (x&92 != 0)) <= ((x&69==0) <= (x&A != 0))):
+            yes = False
+            break
+    if yes == True:
         print(A)
+        break"""
+        
+"""P = [i for i in range(30, 45 + 1)]
+Q = [i for i in range(40, 55 + 1)]
+
+A = []
+
+for x in range(1, 100):
+    if not(((not(x in A))<=(not(x in P))) and ((x in Q)<=(x in A))):
+        A.append(x)
+print(len(A))"""
