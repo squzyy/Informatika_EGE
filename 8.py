@@ -507,6 +507,15 @@ print(len(k))"""
 
 
 
+from itertools import *
+
+k = 0
+for i in product('КАТЕР', repeat = 6):
+    s = ''.join(i)
+    if s[0] == 'Р' and s[-1] == 'К':
+        k += 1
+        print(k, s)
+
 
 
 

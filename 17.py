@@ -465,7 +465,7 @@ for i in range(len(a) - 2):
 print(len(otv), max(otv))"""
 
 
-a = [int(i) for i in open('17.txt')]
+"""a = [int(i) for i in open('17.txt')]
 mx = max([i for i in a if i % 256 == 15])
 
 otv = []
@@ -475,4 +475,42 @@ for i in range(len(a) - 1):
         if (x + y) % mx == 0:
             otv.append(x + y)
 
-print(len(otv), max(otv))
+print(len(otv), max(otv))"""
+
+"""a = [int(i) for i in open('17.txt')]
+
+mx = max([i for i in a if i % 36 == 0])
+otv = []
+for i in range(len(a) - 2):
+    x, y, z = a[i], a[i+1], a[i+2]
+    if ((x > 0 or abs(x) % 100 == 36) and (y > 0 or abs(y) % 100 == 36)) or \
+       ((x > 0 or abs(x) % 100 == 36) and (z > 0 or abs(z) % 100 == 36)) or \
+       ((y > 0 or abs(y) % 100 == 36) and (z > 0 or abs(z) % 100 == 36)):
+        if (x + y + z) <= mx:
+            otv.append(x + y + z)
+print(len(otv), min(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mx = max([i for i in a if i % 100 == 18])
+otv = []
+for i in range(len(a) - 2):
+    x, y, z = a[i], a[i+1], a[i+2]
+    if not ('3' in str(x) and '3' in str(y) and '3' in str(z)):
+        if (x + y + z) <= mx:
+            otv.append(x + y + z)
+print(len(otv), max(otv))"""
+
+
+"""a = [int(x) for x in open('17.txt')]
+
+mn = min([x for x in a if x % 123 == 0])
+otv = []
+for x in range(len(a) - 1):
+    x, y = a[x], a[x+1]
+    da = (x % 2023) >= mn
+    net = (y % 2023) >= mn
+    if da != net: # ТОЛЬКО ДЛЯ ОДНОГО
+        otv.append(x + y)
+print(len(otv), max(otv))"""

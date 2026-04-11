@@ -178,7 +178,7 @@ for ip in net:
         k += 1
         print(k)"""
 
-from ipaddress import *
+"""from ipaddress import *
 
 net = ip_network('123.22.111.192/255.255.255.248', 0)
 k = 0
@@ -186,4 +186,92 @@ for ip in net:
     s = bin(int(ip))[2:].zfill(32)
     if s[-8:].count('0') % 3 != 0:
         k += 1
-        print(k)
+        print(k)"""
+
+"""from ipaddress import *
+
+net = ip_network('191.128.66.83/255.192.0.0', 0)
+print(net[-2])"""
+
+"""from ipaddress import *
+
+net = ip_network('172.95.116.174/255.255.192.0', 0)
+print(net[1])
+print(172+95+64+1)"""
+
+"""from ipaddress import *
+a = []
+net = ip_network('192.168.12.207/255.192.0.0', 0)
+for ip in net:
+    s = bin(int(ip))[2:].zfill(32)
+    if s.count('0') == s.count('1'):
+        a.append(ip)
+print(max(a))"""
+
+"""from ipaddress import *
+
+net = ip_network('46.29.170.214/255.255.128.0', strict=False)
+a = []
+
+for ip in net.hosts():
+    # Получаем октеты как числа
+    octets = str(ip).split('.')
+    d1 = int(octets[0])  # 46
+    d2 = int(octets[1])  # 29
+    d3 = int(octets[2])  # c
+    d4 = int(octets[3])  # d
+
+    # Проверяем: один октет = сумма трёх других
+    if (d1 == d2 + d3 + d4 or
+            d2 == d1 + d3 + d4 or
+            d3 == d1 + d2 + d4 or
+            d4 == d1 + d2 + d3):
+        a.append(ip)
+
+print(max(a))"""
+
+
+"""from ipaddress import *
+
+for m in range(33):
+    ip1 = ip_network(f'200.154.190.12/{m}', 0)
+    ip2 = ip_network(f'200.154.184.0/{m}', 0)
+    if ip1 == ip2:
+        if ip_address('200.154.190.12') != ip1.broadcast_address and ip_address('200.154.190.12') != ip1.network_address and ip_address('200.154.184.0') != ip2.broadcast_address and ip_address('200.154.184.0') != ip2.network_address:
+            print(ip1)"""
+
+
+"""from ipaddress import *
+for m in range(32, 0, -1):
+    net = ip_network(f'143.131.211.37/{m}', 0)
+    k = 0
+    for ip in net:
+        s = bin(int(ip))[2:].zfill(32)
+        if s.count('1') == 10:
+            k += 1
+    if k == 15:
+        print(net)
+        break
+"""
+
+
+
+"""from ipaddress import *
+
+for A in range(256):
+    da = True
+    net = ip_network(f'192.214.{A}.184/255.255.255.224', 0)
+    for ip in net:
+        if bin(int(ip)).count('1') <= 15:
+            da = False
+            break
+    if da == True:
+        print(A)
+        break"""
+
+
+from ipaddress import *
+
+for m in range(33):
+    ip = ip_network(f'218.159.208.24/{m}', 0)
+    print(ip, ip.netmask)

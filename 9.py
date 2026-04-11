@@ -379,7 +379,7 @@ for i in open('9.txt'):
             print(a)
 print(k)"""
 
-s = []
+"""s = []
 k = 1
 for i in open('9.txt'):
     a = sorted([int(x) for x in i.split()])
@@ -390,7 +390,7 @@ for i in open('9.txt'):
             s.append(k)
     k += 1
 print(max(s))
-
+"""
                 
 
 
@@ -401,6 +401,15 @@ print(max(s))
 
 
 
+count = 0
+for s in open('9.txt'):
+    m = [int(x) for x in s.split()]
+    m.sort()
+    pov = [int(x) for x in m if m.count(x) > 1]
+    nepov = [int(x) for x in m if m.count(x) == 1]
+    if len(pov) > 0 and m[0] != m[1] and (m[-1])/((sum(m)-m[-1])/5) > 3:
+        count += 1
+print(count)
 
 
 

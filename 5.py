@@ -277,7 +277,7 @@ for n in range(1, 1000):
 print(max(a))"""
 
 
-a = []
+"""a = []
 for n in range(100 + 1, 1000):
     r = hex(n)[2:]
     r.replace('b', '2')
@@ -288,4 +288,16 @@ for n in range(100 + 1, 1000):
         r = 'f' + r
     if int(r, 16) > 4001:
         a.append([int(r, 16), n])
-print(sorted(max(a)))
+print(sorted(max(a)))"""
+
+a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    if r.count('1') % 2 != 0:
+        r = r + '11'
+    else:
+        r = r + '00'
+    R = int(r, 2)
+    if R > 114:
+        a.append(R)
+print(min(a))

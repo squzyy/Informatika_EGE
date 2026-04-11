@@ -375,4 +375,106 @@ for x in range(1, 95 + 1):
         a.append(x)
 print(sum(a))"""
 
-print(5 * 5)
+"""from string import *
+a = []
+for x in printable[:8]:
+    n1 = int('36' + x + '53', 8)
+    for y in printable[:8]:
+        n2 = int('4' + y + '3', 8)
+        s = n1 - n2
+        if s > 0:
+            a.append(s)
+print(a)"""
+
+
+"""from string import *
+
+for x in printable[:15]:
+    n1 = int('9897' + x + '21', 15)
+    n2 = int('12' + x + '023', 15)
+    s = n1 + n2
+    if s % 14 == 0:
+        print(s//14)"""
+
+"""x = 7 ** 21 + 49 ** 13 - 7 ** 10
+k = 0
+while x > 0:
+    if x % 7 == 6:
+        k += 1
+    x //= 7
+print(k)"""
+
+"""x = 5 ** 20 + 5 ** 10 - 5 ** 13 - 5 ** 3
+sm = 0
+while x > 0:
+    sm += x % 5
+    x //= 5
+print(sm)"""
+
+"""from string import printable
+k = 0
+for x in printable[:18]:
+    n1 = int('56' + x + '3', 18)
+    n2 = int('4' + x + '9', 18)
+    n3 = int('57' + x + '1', 18)
+    s = n1 + n2 - n3
+    pr = True
+    for i in range(2, s):
+        if s % i == 0:
+            pr = False
+            break
+    if s > 0 and pr:
+        k += 1
+        print(k)"""
+
+"""x = 5 * 1296**597 + 8 * 216**314 - 4 * 36**215 + 9 * 6 ** 214 - 7 * 6 ** 18 - 54
+k = 0
+while x > 0:
+    if x % 36 <= 7:
+        k += 1
+    x //= 36
+print(k)"""
+
+"""d = 5**85 + 5**7
+for x in range(2501):
+    s = d - x
+    k = 0
+    while s > 0:
+        if s % 5 == 0:
+            k += 1
+        s //= 5
+    if k == 80:
+        print(x)"""
+
+"""x = 15 * 2401 ** 1500 - 10 * 343 ** 1200 + 40 * 49 ** 1000 - 35 * 7 ** 850 - 4805
+k = 0
+while x > 0:
+    if x % 49 > 9:
+        k += 1
+    x //= 49
+    print(k)"""
+
+"""from string import printable
+
+for x in printable[:17]:
+    n1 = int('5432' + x + '67', 17)
+    n2 = int('302' + x, 17)
+    s = n1 + n2
+    if s % 19 == 0:
+        print(s)"""
+
+
+
+from string import printable
+
+a = []
+for x in printable[:39]:
+    for y in printable[:39]:
+        n1 = int('58' + x + '723' + y + '49', 39)
+        if n1 % 38 == 0:
+            yx = int(y + x, 39)
+            for k in range(yx + 1):
+                if k * k == yx:
+                    a.append(yx)
+
+print(a[0])
