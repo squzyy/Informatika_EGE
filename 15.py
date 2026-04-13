@@ -649,3 +649,18 @@ for x in range(1, 100):
     if not(((not(x in A))<=(not(x in P))) and ((x in Q)<=(x in A))):
         A.append(x)
 print(len(A))"""
+
+
+def Del(n, m):
+    return n % m == 0
+
+for A in range(1, 10000):
+    Yes = True
+    for x in range(1, 10000):
+        if not(((not Del(x , 100)) and Del(x, 4)) or Del(x, 400) or (not Del(x, A))):
+            Yes = False
+            break
+    if Yes == True:
+        print(A)
+        break
+

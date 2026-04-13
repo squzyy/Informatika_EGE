@@ -514,3 +514,60 @@ for x in range(len(a) - 1):
     if da != net: # ТОЛЬКО ДЛЯ ОДНОГО
         otv.append(x + y)
 print(len(otv), max(otv))"""
+
+
+
+"""a = [int(i) for i in open('17.txt')]
+count_div5 = sum(1 for i in a if i % 5 == 0)
+
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if ((x < 0) + (y < 0)) == 1:
+        if x + y < count_div5:
+            otv.append(x + y)
+
+print(len(otv), max(otv))"""
+
+"""a = [int(i) for i in open('17.txt')]
+mx = max([i for i in a if abs(i) % 100 == 42 and 1000 <= abs(i) < 10000])
+otv = []
+for i in range(len(a) - 2):
+    x, y, z = a[i], a[i+1], a[i+2]
+    if ((abs(x) % 100 == 42 and 1000 <= abs(x) < 10000) +
+        (abs(y) % 100 == 42 and 1000 <= abs(y) < 10000) +
+        (abs(z) % 100 == 42 and 1000 <= abs(z) < 10000)) >= 2:
+        if (x + y + z) > mx:
+            otv.append(x + y + z)
+print(len(otv), max(otv))"""
+
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if i % 45 == 0 and 100 <= i < 1000])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if ((1000 <= x < 10000) or (1000 <= y < 10000)):
+        if ((x + y) % mn) == 0:
+            otv.append(x + y)
+print(len(otv), min(otv))"""
+
+
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if 10 <= i < 100])
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if ((10 <= x < 100) + (10 <= y < 100)) == 1:
+        if (x + y) % mn == 0:
+            otv.append(x + y)
+print(len(otv), max(otv))
+"""
+a = [int(i) for i in open('17.txt')]
+otv = []
+for i in range(len(a) - 1):
+    x, y = a[i], a[i+1]
+    if (x % 3 == 0) or (y % 3 == 0):
+        otv.append(x + y)
+print(len(otv), max(otv))
