@@ -452,3 +452,45 @@ odpak = V * pak
 otv = odpak / U
 
 print(otv / 60)"""
+
+"""import math
+dl = 163
+ind = 32_768
+size = 3264 * 1024
+
+for alf in range(1, 1000):
+    i = math.ceil(math.log2(alf))
+    da = i * dl
+    dada = math.ceil(da / 8)
+    net = dada * ind
+    if net >= size:
+        print(alf)
+        break"""
+"""import math
+alf = 10 + 26 + 230
+i = math.ceil(math.log2(alf))
+ind = 506
+size = 63 * 1024
+
+for l in range(1000, 1, -1):
+    nod_bit = l * i
+    nod_byt = math.ceil(nod_bit / 8)
+    da = nod_byt * ind
+    if da > size:
+        print(l)"""
+"""import math
+size = 16_875 * 1024 * 8
+raz = 16
+gc = 48000
+otv = size / raz / gc
+print(otv / 60)"""
+
+import math
+time = 8
+mon = 1
+gc = 10_000
+raz = 16
+
+otv = time * mon * gc * raz
+otv = (otv / 1024 / 8)
+print(otv)
