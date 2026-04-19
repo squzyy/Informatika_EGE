@@ -86,3 +86,25 @@ pp.fd(15)
 pp.hideturtle()
 turtle.mainloop()"""
 
+def to_17(n):
+    s = ''
+    while n > 0:
+        digit = n % 17
+        if digit == 10:
+            s = 'A' + s
+        elif digit == 11:
+            s = 'B' + s
+        elif digit == 12:
+            s = 'C' + s
+        elif digit == 13:
+            s = 'D' + s
+        elif digit == 14:
+            s = 'E' + s
+        elif digit == 15:
+            s = 'F' + s
+        elif digit == 16:
+            s = 'G' + s
+        else:
+            s = str(digit) + s
+        n //= 17
+    return s

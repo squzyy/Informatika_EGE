@@ -290,7 +290,7 @@ for n in range(100 + 1, 1000):
         a.append([int(r, 16), n])
 print(sorted(max(a)))"""
 
-a = []
+"""a = []
 for n in range(1, 1000):
     r = bin(n)[2:]
     if r.count('1') % 2 != 0:
@@ -300,4 +300,87 @@ for n in range(1, 1000):
     R = int(r, 2)
     if R > 114:
         a.append(R)
-print(min(a))
+print(min(a))"""
+
+
+"""a = []
+for n in range(1, 1999):
+    r = bin(n)[2:]
+    if n % 2 != 0:
+        r = r[:-2] + '10'
+    else:
+        r1 = r + '1'
+        r2 = '10' + r[2:]
+    R = int(r, 2)
+    if n >= 26:
+        a.append(R)
+print(min(a))"""
+"""a = []
+for n in range(1, 256):
+    r = bin(n)[2:].zfill(8)
+    r = r[:-1]
+    if r:
+        r = r[::-1]
+        R = int(r, 2)
+    else:
+        R = 0
+    if R == n and n < 100: #Каково наибольшее число, меньшее 100, которое после обработки автоматом не изменится?
+        a.append(R)
+print(max(a))"""
+"""a = []
+for n in range(1, 1999):
+    r = bin(n)[2:]
+    if n % 2 != 0:
+        r = '1' + r
+        r = r[:-2] + '10'
+    else:
+        r = r + '1'
+        r = '10' + r[2:]
+    R = int(r, 2)
+    if n >= 33:
+        a.append(R)
+print(min(a))"""
+"""a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    if n % 2 == 0:
+        r = r + '0' * r.count('0')
+    else:
+        r = '1' * r.count('1') + r
+    R = int(r, 2)
+    if R > 2000:
+        a.append(n)
+print(min(a))"""
+
+"""for n in range(1000):
+    r = bin(n)[2:]
+    r2 = r.count('1')
+    s = bin(r2)[2:]
+    if n == 255:
+        print(s)"""
+
+def to_4(n):
+    s = ''
+    while n > 0:
+        digits = (n % 4)
+        if digits < 10:
+            s = str(digits) + s
+        else:
+            s = chr(ord('A') + digits - 10) + s
+        n //= 4
+    return s
+a = []
+for n in range(1, 1000):
+    r = to_4(n)
+    sum_digits = sum(int(d) for d in str(n))
+    if sum_digits % 2 == 0:
+        r = r + r[2:]
+    else:
+        r = r + '2'
+        r = '10' + r[2:]
+    R = int(r, 4)
+    if R < 250:
+        a.append(n)
+print(max(a))
+
+

@@ -465,7 +465,7 @@ for x in printable[:17]:
 
 
 
-from string import printable
+"""from string import printable
 
 a = []
 for x in printable[:39]:
@@ -477,4 +477,136 @@ for x in printable[:39]:
                 if k * k == yx:
                     a.append(yx)
 
-print(a[0])
+print(a[0])"""
+
+"""from string import *
+
+for x in printable[:36]:
+    n1 = int('NEW', 36)
+    n2 = int('YE' + x + 'R', 36)
+    s = n1 + n2
+    if s % 35 == 0:
+        print(s // 35)"""
+
+"""printbl = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+k = 0
+for x in printbl[:18]:
+    n1 = int('56' + x + '3', 18)
+    n2 = int('4' + x + '9', 18)
+    n3 = int('57' + x + '1', 18)
+    s = n1 + n2 - n3
+    da = True
+    for i in range(2, s):
+
+        if s % i == 0:
+            da = False
+    if s > 1 and da == True:
+        k += 1
+        print(k)"""
+
+
+"""from string import *
+for x in printable[:29]:
+    n1 = int('463' + x + '7921', 29)
+    n2 = int('8241' + x + '153', 29)
+    s = n1 + n2
+    if s % 28 == 0:
+        print(s // 28)"""
+
+"""from string import *
+for x in printable[:18]:
+    n1 = int('77968' + x + '11', 18)
+    n2 = int('4' + x + '213', 18)
+    s = n1 + n2
+    if s % 7 == 0:
+        print(s // 7)"""
+
+"""from string import printable
+
+for x in printable[:17]:
+    n1 = int('149' + x + '3', 17)
+    n2 = int(x + '612', 17)
+    n3 = int(x + '54' + x, 17)
+    s = n1 + n2 - n3
+    a = []
+    if s % 7 == 0:
+        R = int(x, 17)
+        print(R)"""
+
+
+"""def to_4(n):
+    s = ''
+    while n > 0:
+        s = str(n % 4) + s
+        n //= 4
+    return s
+a = []
+for x in range(1, 200):
+    r = to_4(x)
+    if int(r) % 1000 == 123: #r.endswith('123')
+        a.append(x)
+print(a)"""
+
+
+"""def to_17(n):
+    s = ''
+    while n > 0:
+        digit = n % 17
+        if digit < 10:
+            s = str(digit) + s
+        else:
+            s = chr(ord('A') + digit - 10) + s
+        n //= 17
+    return s
+
+
+k = 0
+for x in range(1, 1000):
+    r = to_17(x)
+    if r[0] == '3' and r[-1] == 'D':
+        k += 1
+print(k)"""
+
+"""from string import *
+a = []
+for x in printable[:15]:
+    n1 = int('99658' + x + '29', 15)
+    n2 = int('102' + x + '023', 15)
+    s = n1 + n2
+    if s % 14 == 0:
+        print(s // 14)"""
+
+"""
+записали в некой системе счисления. Определите наибольшее основание этой системы счисления, при котором запись числа будет оканчиваться на 001.
+x = 7 * 512**120 - 6 * 64**100 + 8**210 - 255
+
+for p in range(1000, 1, -1):  # перебираем от 1000 вниз до 2
+    if x % (p**3) == 1:
+        print(p)
+        break"""
+
+"""x = 7 ** 21 + 49 **13 - 7**10
+k = 0
+while x > 0:
+    if x % 7 == 6:
+        k += 1
+    x //= 7
+print(k)"""
+
+def to_18(n):
+    s = ''
+    while n > 0:
+        digit = n % 18
+        if digit < 10:
+            s = str(digit) + s
+        else:
+            s = chr(ord('A')+ digit - 10) + s
+        n //= 18
+    return s
+
+def to_4(n):
+    s = ''
+    while n > 0:
+        s = str(n % 4) + s
+        n //= 4
+    return s
