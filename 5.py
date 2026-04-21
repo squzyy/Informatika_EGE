@@ -359,7 +359,7 @@ print(min(a))"""
     if n == 255:
         print(s)"""
 
-def to_4(n):
+"""def to_4(n):
     s = ''
     while n > 0:
         digits = (n % 4)
@@ -381,6 +381,80 @@ for n in range(1, 1000):
     R = int(r, 4)
     if R < 250:
         a.append(n)
-print(max(a))
+print(max(a))"""
+
+"""def to_3(n):
+    s = ''
+    while n > 0:
+        digits = n % 3
+        if digits < 10:
+            s = str(digits) + s
+        else:
+            s = chr(ord('A') + digits - 10) + s
+        n //= 3
+    return s
+
+a = []
+for n in range(1, 1000):
+    r = to_3(n)
+    if r:
+        if n % 3 == 0:
+            r = r + r[-2:]
+        else:
+            s = n % 3
+            r5 = s * 5
+            r = r + to_3(r5)
+    else:
+        R = 0
+    R = int(r, 3)
+    if R > 150:
+        a.append(R)
+print(min(a))"""
+"""ss = []
+
+for a in range(100, 1000):
+    for b in range(100, 1000):
+        if a != b:
+
+            a1, a2, a3 = int(str(a)[0]), int(str(a)[1]), int(str(a)[2])
+            b1, b2, b3 = int(str(b)[0]), int(str(b)[1]), int(str(b)[2])
+
+            s1 = a1 + b1
+            s2 = a2 + b2
+            s3 = a3 + b3
+
+            if s2 > s1:
+                res = int(str(s2) + str(s1) + str(s3))
+            else:
+                res = int(str(s1) + str(s2) + str(s3))
+
+            ss.append(res)
+
+print(len(set(ss)))"""
 
 
+"""def to_8(n):
+    s = ''
+    while n > 0:
+        digits = n % 8
+        if digits < 10:
+            s = str(digits) + s
+        else:
+            s = chr(ord('A') - digits + 10) + s
+        n //= 8
+    return s
+
+
+a = []
+for n in range(115, 116):
+    r = to_8(n)  # r = "163"
+
+    filtered = ''
+    for digit in r:
+        if int(digit) % 2 != 0:
+            filtered = filtered + digit
+
+    R = int(filtered, 8)
+    a.append(R)
+
+print(a)"""

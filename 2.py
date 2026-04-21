@@ -374,26 +374,8 @@ for a, b, c, d in product([0, 1], repeat = 4):
         for p in permutations('xyzw', r = 4):
             if all(f(**dict(zip(p, line))) == line[-1] for line in table):
                 print(*p)"""
-    
-        
-            
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-from itertools import *
+"""from itertools import *
 
 def f1(x, y, z, w):
     return ((x <= y) == (w or (not z)))
@@ -412,36 +394,66 @@ for a, b, c, d, e in product([0, 1], repeat = 5):
             if all(f1(**dict(zip(p, line))) == line[4] for line in table):
                 if all(f2(**dict(zip(p, line))) == line[5] for line in table):
                     print(*p)
+"""
+
+"""from itertools import  *
+
+def f(w,x,y,z):
+    return w and (x ==(z <= y))
+
+table = (
+    (0, 1, 1, 0, 1),
+    (0, 1, 0, 1, 1),
+    (1, 1, 0, 1, 1)
+)
+for p in permutations('wxyz', r=4):
+    if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+        print(*p)"""
+
+"""from itertools import *
+def f(c, b, a):
+    return c and (not b) or c and a
+table = (
+    (0, 1, 0, 1),
+    (0, 1, 1, 1),
+    (1, 1, 1, 1)
+)
+
+for p in permutations('cba', r = 3):
+    if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+        print(*p)"""
 
 
+"""from itertools import *
 
+def f(c, a, t, s):
+    return ((not c) <= (not a)) or (not(t <= s) or c)
+for x, y, z, w, e, l in product([0, 1], repeat = 6):
+    table = (
+        (x, y, z, 1, 0),
+        (w, 0, 1, 1, 0),
+        (1, e, 1, l, 0)
+    )
+    if len(table) == len(set(table)):
+        for p in permutations('cats', r=4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)"""
 
+from itertools import *
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def f(w, x, y, z):
+    return (z <= x) and ((not(y)) and ((not(w)) == y))
+for a, b, c, d, e in product([0, 1], repeat = 5):
+    table = (
+        (0, 1, a, 0, 0),
+        (1, b, 0, c, 0),
+        (0, 1, 1, d, 1),
+        (e, 1, 1, 1, 1)
+    )
+    if len(table) == len(set(table)):
+        for p in permutations('wxyz', r = 4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
 
 
 

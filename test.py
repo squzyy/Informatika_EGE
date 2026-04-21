@@ -108,3 +108,7 @@ def to_17(n):
             s = str(digit) + s
         n //= 17
     return s
+
+s = '223'
+
+if s %
