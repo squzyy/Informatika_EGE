@@ -458,3 +458,29 @@ for n in range(115, 116):
     a.append(R)
 
 print(a)"""
+
+"""a = []
+for n in range(1, 1999):
+    r = bin(n)[2:]
+    if r.count('1') > r.count('0'):
+        r = r + '1'
+    else:
+        r = r + '0'
+    R = int(r, 2)
+    if R > 80:
+        a.append(R)
+print(min(a))"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+

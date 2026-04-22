@@ -487,45 +487,34 @@ for i in permutations('ДЫНЬКА'):
         k.add(''.join(i))
 print(len(k))"""
 
-
-
-
-
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-from itertools import *
+"""from itertools import *
 
 k = 0
 for i in product('КАТЕР', repeat = 6):
     s = ''.join(i)
     if s[0] == 'Р' and s[-1] == 'К':
         k += 1
-        print(k, s)
+        print(k, s)"""
 
 
 
 
 
+"""from itertools import *
+k = 0
+for i in product('ВИШНЯ', repeat=6):
+    s = ''.join(i)
+    if s.count('В') <= 1 and s[0] != 'Ш' and s[-1] != 'И' and s[-1] != 'Я':
+        k += 1
+        print(k)"""
 
 
 
-
-
-
+"""from itertools import *
+for x, bup in enumerate(product(sorted('АВТОБУС'), repeat=5), 1):
+    f = ''.join(bup)
+    if ('А' and 'О') not in f and f[-1] == 'Б' and f[-2] == "С" and f.count('А')==0 and f.count('В')==1 and f.count('Т')==1 and f.count('О')==0 and f.count('Б')==1 and f.count('У')==1 and f.count('С')==1:
+        print(f, x)"""
 
 
 

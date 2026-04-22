@@ -485,7 +485,7 @@ gc = 48000
 otv = size / raz / gc
 print(otv / 60)"""
 
-import math
+"""import math
 time = 8
 mon = 1
 gc = 10_000
@@ -493,4 +493,49 @@ raz = 16
 
 otv = time * mon * gc * raz
 otv = (otv / 1024 / 8)
-print(otv)
+print(otv)"""
+
+"""import math
+
+prop = 256000
+time_m = 18
+gc = 48 * 1000
+i = 10
+st = 2
+time_s = 18 * 60
+
+V_peredanogo_f = prop * time_s / 0.6
+
+V = V_peredanogo_f / (gc * st * i)
+print(V / 60)"""
+
+"""import math
+
+st1 = 2
+gc1 = 32 * 1000
+raz1 = 32
+size1 = 42 * 1024 * 1024 * 8
+
+st2 = 1
+gc2 = 16 * 1000
+raz2 = 16
+size2 = 7 * 1024 * 1024 * 8
+
+t = (size1 - size2) / (st1 * gc1 * raz1 - st2 * gc2 * raz2) # время у обоих
+otv = size1 - st1 * gc1 * raz1 * t # V служебной информации(загаловок или что то типо)
+print(otv / 8 / 1024 / 1024)"""
+
+"""import math
+dl = 10
+alf = 26
+i = math.ceil(math.log2(alf))
+na_od = 14
+users = 5
+
+na_od_da = dl * i
+resh = math.ceil(na_od_da / 8)
+naodonogo = resh + na_od
+otv = naodonogo * users
+print(otv)"""
+
+

@@ -270,8 +270,12 @@ for A in range(256):
         break"""
 
 
-from ipaddress import *
+"""from ipaddress import *
 
 for m in range(33):
     ip = ip_network(f'218.159.208.24/{m}', 0)
-    print(ip, ip.netmask)
+    print(ip, ip.netmask)"""
+"""from ipaddress import *
+for m in range(33):
+    ip = ip_network(f'93.138.161.94/{m}', 0)
+    print(ip)"""

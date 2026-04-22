@@ -593,7 +593,7 @@ while x > 0:
     x //= 7
 print(k)"""
 
-def to_18(n):
+"""def to_18(n):
     s = ''
     while n > 0:
         digit = n % 18
@@ -609,4 +609,12 @@ def to_4(n):
     while n > 0:
         s = str(n % 4) + s
         n //= 4
-    return s
+    return s"""
+
+x = 4**1014 + 2**1012 - 7
+k = 0
+while x > 0:
+    if x % 2 == 1:
+        k += 1
+    x //= 2
+print(k)

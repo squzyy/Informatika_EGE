@@ -651,7 +651,7 @@ for x in range(1, 100):
 print(len(A))"""
 
 
-def Del(n, m):
+"""def Del(n, m):
     return n % m == 0
 
 for A in range(1, 10000):
@@ -662,5 +662,15 @@ for A in range(1, 10000):
             break
     if Yes == True:
         print(A)
-        break
+        break"""
 
+def Del(n, m):
+    return n % m == 0
+for A in range(1, 10001):
+    yes = True
+    for x in range(1, 1000):
+        if not((A < 50) and ((not(Del(x, A))) <= (Del(x, 10) <= (not Del(x, 12))))):
+            yes = False
+            break
+    if yes:
+        print(A)
