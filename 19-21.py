@@ -575,7 +575,7 @@ for k2 in range(1, 69):
     if F(12, k2, 1):
         print(f'21: {k2}')"""
 
-def F(k1, k2, x):
+"""def F(k1, k2, x):
     if x == 3 and (k1 + k2) >= 131:
         return True
     if x == 3 and (k1 + k2) < 131:
@@ -626,28 +626,27 @@ def F(k1, k2, x):
 
 for k2 in range(1, 120):
     if F(11, k2, 1):
-        print(f'21: {k2}')
+        print(f'21: {k2}')"""
 
 
 
 
+def F(k, x):
+  if x == 3 and k >= 55 and k <= 77:
+    return True
+  if x == 3 and k > 77:
+    return False
+  if x == 4 and k >= 55 and k <= 77:
+    return False
+  if x == 4 and k > 77:
+    return True
+  if k >= 55:
+    return False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print('Андрей лох')
+  if x % 2 == 0:
+    return F(k + 3, x + 1) or F(k * 2, x + 1) or F(k * 3, x + 1)
+  else:
+    return F(k + 3, x + 1) and F(k * 2, x + 1) and F(k * 3, x + 1)
+for k in range(1, 55):
+  if F(k, 1):
+    print(k)

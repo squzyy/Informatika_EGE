@@ -520,13 +520,27 @@ for x, bup in enumerate(product(sorted('АВТОБУС'), repeat=5), 1):
 
 
 
+"""from itertools import *
+k = 0
+for i in product('БАНДЕРОЛЬ', repeat = 7):
+  s = ''.join(i)
+  if s.count('Ь') <= 1 and \
+  all(d + 'Е' not in s and 'Е' + d not in s for d in 'БНДРЛ'):
+    k += 1
+    print(s)"""
 
+from itertools import *
 
+k = 0
+p = '13579b'
+d = '02468ac'
+for i in product('0123456789abc', repeat=7):
 
-
-
-
-
+  s = ''.join(i)
+  if s[0] != '0' and s.count('5') >= 2 and all(d1 + d2 not in s for d1 in d for d2 in d) and all(
+          d3 + d4 not in s for d3 in p for d4 in p): # никакие две чётные и две нечётные цифры не стоят рядом.
+    k += 1
+print(k, s)
 
 
 

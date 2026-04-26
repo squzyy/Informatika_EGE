@@ -332,7 +332,7 @@ print(da)"""
 
 
     
-def F(n):
+"""def F(n):
     if n == 1:
         return 1
     if n == 2:
@@ -340,4 +340,21 @@ def F(n):
     if n > 2:
         return F(n-2) * (n + 1)
 da = F(8)
-print(da)
+print(da)"""
+from functools import lru_cache
+
+@lru_cache(None)
+def F(n):
+    if n <= 1:
+        return 1
+    if n % 2 == 0 and n > 1:          # чётное
+        return (n // 2) * F(n - 1)
+    if n % 2 != 0 and n > 1:                   # нечётное
+        return ((n - 1) // 2) * F(n - 1)
+
+# Прогрев кеша не обязателен, но можно для скорости
+for n in range(1, 10000):
+    F(n)
+
+result = (F(2024) - F(2022)) / F(2021)
+print(result)

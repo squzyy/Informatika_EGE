@@ -327,3 +327,75 @@ for x in range(-50, 50):
         dot(3, 'red')
         goto(x*k, y*k)
 done()"""
+
+"""from turtle import *
+left(90)
+tracer(0)
+k = 20
+screensize(2000, 2000)
+
+rt(30)
+for i in range(3):
+    rt(45)
+    fd(4*k)
+    rt(45)
+
+rt(315)
+fd(4*k)
+for i in range(2):
+    rt(90)
+    fd(4*k)
+up()
+for x in range(-25, 25):
+    for y in range(-25, 25):
+        dot(3, 'red')
+        goto(x*k, y*k)
+done()"""
+
+"""from turtle import *
+left(90)
+tracer(0)
+k = 15
+
+for i in range(42):
+    rt(60)
+    fd(7*k)
+    rt(60)
+up()
+
+for x in range(-50, 50):
+    for y in range(-50, 50):
+        dot(3, 'red')
+        goto(x * k, y * k)
+done()"""
+from turtle import *
+left(90)
+tracer(0)
+k = 15
+screensize(2900, 2900)
+
+for i in range(7):
+    fd(78*k)
+    rt(90)
+    fd(51*k)
+    rt(90)
+up()
+
+rt(90)
+fd(18*k)
+rt(90)
+fd(6*k)
+down()
+
+for i in range(3):
+    rt(90)
+    fd(22*k)
+    rt(90)
+    fd(44*k)
+up()
+
+for x in range(-100, 100):
+    for y in range(-100, 100):
+        dot(3, 'red')
+        goto(x*k, y*k)
+done()
