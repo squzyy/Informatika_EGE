@@ -433,3 +433,11 @@ for i in open('9.txt'):
         if (sum(nchet)*3) > (chet[0]*chet[1]):
             k += 1
 print(k)"""
+for k, i in enumerate(open('9.txt'), 1):
+    a = sorted([int(x) for x in i.split()])
+    to_2 = [int(x) for x in a if a.count(x) == 2]
+    to_1 = [int(x) for x in a if a.count(x) == 1]
+    if len(to_2) == 2 and a.count(a[-1]) == 1:
+        print(k)
+        break
+        

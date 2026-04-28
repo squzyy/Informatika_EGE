@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e74faae-1050-48fa-b7ce-6cf9150f49ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/23.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/16.py" beforeDir="false" afterPath="$PROJECT_DIR$/16.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/19-21.py" beforeDir="false" afterPath="$PROJECT_DIR$/19-21.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6.py" beforeDir="false" afterPath="$PROJECT_DIR$/6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8.py" beforeDir="false" afterPath="$PROJECT_DIR$/8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/23.py" beforeDir="false" afterPath="$PROJECT_DIR$/23.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/9.py" beforeDir="false" afterPath="$PROJECT_DIR$/9.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/9.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Podskazki.py" beforeDir="false" afterPath="$PROJECT_DIR$/Podskazki.py" afterDir="false" />
@@ -61,8 +57,8 @@
       <recent name="C:\Users\Namikuru\Desktop\Infa" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.23">
-    <configuration name="17" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.16">
+    <configuration name="16" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Infa" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,7 +71,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/17.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/16.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,16 +195,16 @@
       <item itemvalue="Python.6" />
       <item itemvalue="Python.8" />
       <item itemvalue="Python.9" />
-      <item itemvalue="Python.17" />
       <item itemvalue="Python.23" />
+      <item itemvalue="Python.16" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.16" />
         <item itemvalue="Python.23" />
         <item itemvalue="Python.6" />
         <item itemvalue="Python.9" />
         <item itemvalue="Python.8" />
-        <item itemvalue="Python.17" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +244,10 @@
       <workItem from="1776960541771" duration="1100000" />
       <workItem from="1776964311059" duration="6588000" />
       <workItem from="1777034280342" duration="2343000" />
-      <workItem from="1777205633406" duration="2793000" />
+      <workItem from="1777205633406" duration="6130000" />
+      <workItem from="1777310530478" duration="3037000" />
+      <workItem from="1777378034161" duration="3033000" />
+      <workItem from="1777385635638" duration="718000" />
     </task>
     <servers />
   </component>
@@ -262,7 +261,7 @@
     <SUITE FILE_PATH="coverage/Infa$9.coverage" NAME="9 Coverage Results" MODIFIED="1777036421111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$19_21.coverage" NAME="19-21 Coverage Results" MODIFIED="1775838072630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$5.coverage" NAME="5 Coverage Results" MODIFIED="1776881091653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Infa$23.coverage" NAME="23 Coverage Results" MODIFIED="1777208432106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Infa$23.coverage" NAME="23 Coverage Results" MODIFIED="1777382918308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$8.coverage" NAME="8 Coverage Results" MODIFIED="1777036054581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$main.coverage" NAME="test Coverage Results" MODIFIED="1774964872243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$7_11.coverage" NAME="7-11 Coverage Results" MODIFIED="1776884682660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -271,6 +270,6 @@
     <SUITE FILE_PATH="coverage/Infa$15.coverage" NAME="15 Coverage Results" MODIFIED="1776964469153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$2.coverage" NAME="2 Coverage Results" MODIFIED="1776878831922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Infa$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1776772318956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Infa$16.coverage" NAME="16 Coverage Results" MODIFIED="1776970388389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Infa$16.coverage" NAME="16 Coverage Results" MODIFIED="1777383733899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -341,7 +341,7 @@ print(da)"""
         return F(n-2) * (n + 1)
 da = F(8)
 print(da)"""
-from functools import lru_cache
+"""from functools import lru_cache
 
 @lru_cache(None)
 def F(n):
@@ -357,4 +357,18 @@ for n in range(1, 10000):
     F(n)
 
 result = (F(2024) - F(2022)) / F(2021)
-print(result)
+print(result)"""
+def F(n):
+    result = 1
+    for i in range(n, 3001):   # от n до 3000 включительно
+        result = result * i
+    return result
+
+# Вычисляем нужные значения
+f52 = F(52)
+f53 = F(53)
+f54 = F(54)
+
+# Считаем результат
+answer = (f52 - 2 * f53) // f54
+print(answer)
