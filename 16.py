@@ -358,7 +358,7 @@ for n in range(1, 10000):
 
 result = (F(2024) - F(2022)) / F(2021)
 print(result)"""
-def F(n):
+"""def F(n):
     result = 1
     for i in range(n, 3001):   # от n до 3000 включительно
         result = result * i
@@ -372,3 +372,39 @@ f54 = F(54)
 # Считаем результат
 answer = (f52 - 2 * f53) // f54
 print(answer)
+"""
+"""from functools import lru_cache
+@lru_cache(None)
+def F(n):
+  if n <= 12:
+    return 1
+  if n > 12:
+    return F(n - 1) + n - 2
+for n in range(1, 3000):
+  F(n)
+print(F(2024) - F(2020))"""
+"""from functools import lru_cache
+
+@lru_cache(None)
+def F(n):
+    if n <= 1000:
+        return 0  # базовое значение не влияет на ответ
+    return n + 2 * F(n - 2) + 6 * F(n - 6)
+for n in range(30000, 0, -1):
+  F(n)
+result = F(20024) - 2 * F(20022) - 3 * F(20020) + 18 * F(20014)
+print(result)"""
+# Массив для хранения значений F(n)
+F = [0] * 20025  # индексы от 0 до 20024
+
+# Базовые значения для n <= 1000 (можно любые)
+for n in range(1001):
+    F[n] = 0  # всё равно сократится
+
+# Вычисляем для n от 1001 до 20024
+for n in range(0, 20025):
+    F[n] = n + 2 * F[n-2] + 6 * F[n-6]
+
+# Считаем результат
+result = F[20024] - 2*F[20022] - 3*F[20020] + 18*F[20014]
+print(result)
