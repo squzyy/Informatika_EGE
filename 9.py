@@ -433,11 +433,58 @@ for i in open('9.txt'):
         if (sum(nchet)*3) > (chet[0]*chet[1]):
             k += 1
 print(k)"""
-for k, i in enumerate(open('9.txt'), 1):
+"""for k, i in enumerate(open('9.txt'), 1):
     a = sorted([int(x) for x in i.split()])
     to_2 = [int(x) for x in a if a.count(x) == 2]
     to_1 = [int(x) for x in a if a.count(x) == 1]
     if len(to_2) == 2 and a.count(a[-1]) == 1:
         print(k)
-        break
-        
+        break"""
+
+"""for k, i in enumerate(open('9.txt'), 1):
+    a = sorted([int(x) for x in i.split()])
+    to_2 = [int(x) for x in a if a.count(x) == 2]
+    to_1 = [int(x) for x in a if a.count(x) == 1]
+    if len(to_2) == 2 and a.count(a[-1]) == 1:
+        print(k)
+        break"""
+"""k = 0
+for i in open('9.txt'):
+    a = sorted([int(x) for x in i.split()])
+    to_1 = [x for x in a if a.count(x) == 1]
+    if len(to_1) == 3 and a[-1] ** 2 < (a[0] ** 2 + a[1] ** 2):
+        k += 1
+print(k)"""
+
+"""a = sorted([100, 100, 200, 200, 2, 3])
+to_1 = [x for x in set(a) if a.count(x) == 1]
+to_2 = [x for x in set(a) if a.count(x) == 2]
+da = to_2[-1] ** 2 > (to_1[0] * to_1[1])
+if len(to_2) == 2 and len(to_1) == 2 and da:
+    print(a)"""
+"""k = 0
+for i in open('9.txt'):
+    a = ([int(x) for x in i.split()])
+    to_1 = [x for x in a if a.count(x) == 1]
+    to_2 = [x for x in a if a.count(x) > 1]
+    if to_1 and to_2:
+        if (sum(to_1) / len(to_1)) < (sum(to_2) / len(to_2)):
+            k += 1
+            print(k)"""
+
+"""for k, i in enumerate(open('9.txt'), 1):
+    a = ([int(x) for x in i.split()])
+    to_1 = [x for x in a if a.count(x) == 1]
+    to_3 = [x for x in a if a.count(x) == 3]
+    if len(to_3) == 2 and len(to_1) == 4:
+        if to_3[0] > (sum(to_1) / len(to_1)):
+            print(k)"""
+k = 0
+for i in open('9.txt'):
+    a = ([int(x) for x in i.split()])
+    to_1 = [x for x in a if a.count(x) == 1]
+    to_3 = [x for x in a if a.count(x) == 2]
+    if len(to_3) == 4 and len(to_1) == 3:
+        if (sum(to_1) / len(to_1)) <= (sum(a) / len(a)):
+            k += 1
+            print(k)

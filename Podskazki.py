@@ -161,3 +161,6 @@ if len(to_2) == 2
 Если F(n-1)
 то for n in range(1, 3001)
 '''
+r = '000'
+r = '11' + r[2:]
+print(r)
