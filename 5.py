@@ -471,7 +471,27 @@ for n in range(1, 1999):
         a.append(R)
 print(min(a))"""
 
-
+"""def to_3(n):
+  s = ''
+  while n > 0:
+    digit = n % 3
+    if digit < 10:
+      s = str(digit) + s
+    else:
+      s = chr(ord('A') + digit - 10) + s
+    n //= 3
+  return s
+a = []
+for n in range(1, 1000):
+  r = to_3(n)
+  if r[0] == r[-1]:
+    r = r + (r[0])
+  else:
+    r = r + max(r[0] or r[-1])
+  R = int(r, 3)
+  if R > 49:
+    a.append(n)
+print(min(a))"""
 
 
 
