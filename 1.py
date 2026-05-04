@@ -62,3 +62,4 @@ print('1 2 3 4 5 6 7')
 for p in permutations('АБВГДЕК'):
   if all(str(p.index(x) + 1) in a[p.index(y)] for x, y in s):
     print(*p)"""
+from string
