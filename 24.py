@@ -84,7 +84,7 @@ for l in range(len(a)):
                 mx = max(mx, len(s))
 print(mx)"""
 
-a = open('24.txt').readline()
+"""a = open('24.txt').readline()
 mx = 0
 for l in range(len(a)):
     for r in range(l+1+mx, len(a)):
@@ -92,5 +92,73 @@ for l in range(len(a)):
         if s.count('Y') > 80: # в условии не прописываем что нам не подходит s.count('2025') < 90 так как она накапливается
             break
         if s.count('2025') >= 90 and s.count('Y') == 80:
+            mx = max(mx, len(s))
+print(mx)"""
+
+"""a = open('24.txt').readline()
+a = a.replace('A', '*').replace('B', '*').replace('C', '*').replace('D', '*').replace('E', ' ').replace('F', ' ').split()
+k = 0
+mx = 0
+print(len(max(a)))"""
+
+"""a = open('24.txt').readline()
+mx = 1
+
+for i in 'AEIOUY':
+    a = a.replace(i, 'E')
+
+
+for l in range(len(a)):
+    for r in range(l+mx, len(a)):
+        d = a[l:r+1]
+        if d.count('E') > 1:
+            break
+        if d == ''.join(sorted(d)):
+            mx = max(mx, len(d))
+print(mx)"""
+
+"""a = open('24.txt').readline()
+
+for i in '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+    if i in '0369CFILORUX':  # символы, кратные 3 в 36-ричной системе
+        a = a.replace(i, '1')
+    else:
+        a = a.replace(i, '0')
+
+mx = len(a)  # начинаем с максимума, чтобы искать минимум
+for l in range(len(a)):
+    for r in range(l+1, len(a)):
+        s = a[l:r+1]
+        if s.count('1') > 1000:
+            break
+        elif s.count('1') == 1000:
+            if len(s) < mx:
+                mx = len(s)
+                break
+print(mx)"""
+"""a = open('24.txt').readline()
+for i in 'AEOU':
+  a = a.replace(i, 'I')
+for b in 'KLMN':
+  a = a.replace(b, 'J')
+
+mx = 1
+for l in range(len(a)):
+  for r in range(l+mx, len(a)):
+    s = a[l:r+1]
+    if 'JJ' in s or 'II' in s:
+      break
+    else:
+      mx = max(mx, len(s))
+print(mx)"""
+
+a = open('24.txt').readline()
+mx = 1
+for l in range(len(a)):
+    for r in range(l+mx, len(a)):
+        s = a[l:r+1]
+        if s.count('A') > 240:
+            break
+        else:
             mx = max(mx, len(s))
 print(mx)
