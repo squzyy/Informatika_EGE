@@ -499,8 +499,9 @@ print(min(a))"""
 
 
 
-
-
-
+r = '001100'
+r1 = len(r) // 2
+r = r[r1:]
+print(r)
 
 
