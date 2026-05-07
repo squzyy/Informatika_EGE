@@ -184,6 +184,24 @@ for l in range(len(a)):
 """from string import printable
 result = ''.join([i for i in printable])
 print(result)"""
-from string import printable
-result = ''.join([i for i in printable[:15]])
-print(result)
+
+"""
+# перебор делителей через корень, для больших чисел
+x = 1_000_000
+delit = []
+for d in range(1, int(x ** 0.5) + 1):
+    if x % d == 0:
+        delit.append(d)
+        delit.append(x // d)
+print(set(delit))
+"""
+'''
+# Функция для разложения любых чисел на произведение простых множителей:
+def f(x):
+    for d in range(2, int(x ** 0.5)  + 1):
+        if x % d == 0:
+            return [d] + f(x // d)
+    return [x]
+print(f(5))
+print(f(16))
+'''

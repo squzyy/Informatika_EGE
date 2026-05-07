@@ -215,7 +215,7 @@ a = open('24.txt').readline()
 a = a.replace('4', 'a').replace('3', 'e')
 a = a.replace('4', 'a').replace('3', 'e')
 a = a.replace('yandex', '******')
-a = a.replace('ya', '*').replace('yan', '*').replace('yand', '*').replace('yande', '*')
+a = a.replace('ya', '**').replace('yan', '***').replace('yand', '****').replace('yande', '*****')
 k = 0
 mx = 0
 for i in range(len(a)):
