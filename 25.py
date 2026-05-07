@@ -146,4 +146,82 @@ for x in range(1_324_728, 1_325_728):
          if all(str(i).count('5') == 1 for i in d): #содержит в своей записи ровно одну цифру 5.
              print(x, max(d))
 """
-             
+
+"""def D(x):
+    dels = []
+    for d in range(2, int(x ** 0.5) + 1):
+        if x % d == 0:
+            dels.append(d)
+            dels.append(x // d)
+    return set(dels)
+
+for x in range(135790, 163229):
+    dels = D(x)
+    R = sum(dels)
+    if R > 460000:
+        print(len(dels), R) # запишите количество делителей"""
+
+"""def D(x):
+    dels = []
+    for d in range(2, int(x ** 0.5) + 1):
+        if x % d == 0:
+            dels.append(d)
+            dels.append(x // d)
+    return set(dels)
+
+for x in range(123457, 123900):
+    dels = D(x)
+    if len(dels) == 4: #записать это число и сумму найденных ЧЕТЫРЕХ его делителей
+        R = sum(dels)
+        print(x, R)"""
+    
+"""def D(x):
+    dels = []
+    for d in range(1, int(x ** 0.5) + 1):
+        if x % d == 0:
+            dels.append(d)
+            dels.append(x // d)
+    return set(dels)
+
+for x in range(326496, 649633):
+    d = D(x)
+    che = [i for i in d if i % 2 == 0]
+    nche = [i for i in d if i % 2 != 0]
+    da = [i for i in d if i > 1000] # минимальный делитель, больший 1000
+    if len(che) == len(nche):
+        if len(che) >= 70 and len(nche) >= 70:
+            if da:
+                print(x, min(da)) # минимальный делитель, больший 1000"""
+            
+"""def f(x):
+    for d in range(2, int(x ** 0.5) + 1):
+        if x % d == 0:
+            return [d] + f(x // d)
+    return [x]
+
+for x in range(1326235, 1326935):
+    r = f(x)
+    if len(r) == 2:
+        if all(str(i).count('7') == 1 for i in r):
+            print(x, max(r))"""
+
+"""from fnmatch import *
+
+for x in range(1756, 10**8+1, 1756):
+    if fnmatch(str(x), '12*45*3'):
+        print(x, x // 1756)"""
+
+
+def D(x):
+    dels = []
+    for d in range(2, int(x ** 0.5) + 1):
+        if x % d == 0:
+            dels.append(d)
+            dels.append(x // d)
+    return set(dels)
+
+for x in range(800_001, 801_000):
+    d = D(x)
+    da = [i for i in d if i != 14 and i % 100 == 14]
+    if da:
+        print(x, min(da))
