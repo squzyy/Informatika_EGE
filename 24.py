@@ -152,7 +152,7 @@ for l in range(len(a)):
       mx = max(mx, len(s))
 print(mx)"""
 
-a = open('24.txt').readline()
+"""a = open('24.txt').readline()
 mx = 1
 for l in range(len(a)):
     for r in range(l+mx, len(a)):
@@ -161,4 +161,68 @@ for l in range(len(a)):
             break
         else:
             mx = max(mx, len(s))
+print(mx)"""
+
+"""a = open('24.txt').readline()
+a = a.replace('EA', '@').replace('NPC', '#')
+a = a.replace('E', ' ').replace('A', ' ').replace('N', ' ').replace('P', ' ').replace('C', ' ')
+a = a.replace('@', '**').replace('#', '***')
+
+mx = 0
+k = 0
+for i in range(len(a)):
+    if a[i] == '*':
+        k += 1
+        mx = max(mx, k)
+    else:
+        k = 0
+print(mx)"""
+"""a = 'PCPC'
+a = a.replace('PC', '*').replace('CSGO', '#')
+a = a.replace('P', ' ').replace('C', ' ').replace('S', ' ').replace('G', ' ').replace('O', ' ')
+
+mx = 0
+k = 0
+for ch in a:
+    if ch == '*' or ch == '#':
+        if ch == '*':
+            k += 2
+        else:
+            k += 4
+        mx = max(mx, k)
+    else:
+        k = 0
+print(mx)"""
+
+"""a = open('24.txt').readline()
+
+# Находим ВСЕ позиции буквы E
+positions = []
+for i in range(len(a)):
+    if a[i] == 'E':
+        positions.append(i)
+
+# Теперь ищем минимальный отрезок, содержащий 240 E
+mn = len(a)
+for i in range(len(positions) - 239):  # 240 E подряд
+    length = positions[i+239] - positions[i] + 1
+    if length < mn:
+        mn = length
+
+print(mn)"""
+
+a = open('24.txt').readline()
+a = a.replace('4', 'a').replace('3', 'e')
+a = a.replace('4', 'a').replace('3', 'e')
+a = a.replace('yandex', '******')
+a = a.replace('ya', '*').replace('yan', '*').replace('yand', '*').replace('yande', '*')
+k = 0
+mx = 0
+for i in range(len(a)):
+    if a[i] == '*':
+        k += 1
+        mx = max(mx, k)
+    else:
+        k = 0
 print(mx)
+        

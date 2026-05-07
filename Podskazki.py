@@ -180,3 +180,10 @@ a = '123456'
 for l in range(len(a)):
     for r in range(l+1, len(a)):
         print(a[l:r+1])"""
+# для системок счисления, букавы циферы
+"""from string import printable
+result = ''.join([i for i in printable])
+print(result)"""
+from string import printable
+result = ''.join([i for i in printable[:15]])
+print(result)

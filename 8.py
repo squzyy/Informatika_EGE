@@ -529,7 +529,7 @@ for i in product('БАНДЕРОЛЬ', repeat = 7):
     k += 1
     print(s)"""
 
-from itertools import *
+"""from itertools import *
 
 k = 0
 p = '13579b'
@@ -542,7 +542,14 @@ for i in product('0123456789abc', repeat=7):
     k += 1
 print(k, s)
 
-
+from itertools import *
+k = 0
+for i in product('0123456', repeat=5):
+    s = ''.join(i)
+    if s[0] != '0' and len(set(s)) == 5:
+        if all((int(s[j]) % 2) != (int(s[j+1]) % 2) for j in range(4)):
+            k += 1
+print(k)"""
 
 
 

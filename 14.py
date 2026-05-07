@@ -611,10 +611,13 @@ def to_4(n):
         n //= 4
     return s"""
 
-x = 4**1014 + 2**1012 - 7
+"""x = 4**1014 + 2**1012 - 7
 k = 0
 while x > 0:
     if x % 2 == 1:
         k += 1
     x //= 2
-print(k)
+print(k)"""
+from string import printable
+result = ''.join([i for i in printable])
+print(result)
