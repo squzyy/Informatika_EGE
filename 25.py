@@ -212,7 +212,7 @@ for x in range(1756, 10**8+1, 1756):
         print(x, x // 1756)"""
 
 
-def D(x):
+"""def D(x):
     dels = []
     for d in range(2, int(x ** 0.5) + 1):
         if x % d == 0:
@@ -224,4 +224,53 @@ for x in range(800_001, 801_000):
     d = D(x)
     da = [i for i in d if i != 14 and i % 100 == 14]
     if da:
+        print(x, min(da))"""
+"""from fnmatch import *
+
+for x in range(1756, 10**8+1, 1756):
+    if fnmatch(str(x), '12*45*3'):
+        print(x, x // 1756)"""
+
+"""from fnmatch import fnmatch
+
+for x in range(13, 10**8+1, 13):
+    if fnmatch(str(x), '123*678'):
+        print(x, x // 13)"""
+
+"""def D(x):
+    dels = []
+    for d in range(2, int(x ** 0.5) + 1):
+        if x % d == 0:
+            dels.append(d)
+            dels.append(x // d)
+    return set(dels)
+
+for x in range(228224, 531136):
+    r = D(x)
+    da = []
+    
+    # Перебираем нечётные числа, их кубы не превосходят x
+    k = 1
+    while k ** 3 <= x:
+        kub = k ** 3
+        if kub in r:  # если куб является делителем
+            da.append(kub)
+        k += 2  # только нечётные
+    
+    if len(da) >= 4:
+        print(len(r), max(r))
+"""
+def D(x):
+    dels = []
+    for d in range(2, int(x ** 0.5)+1):
+        if x % d == 0:
+            dels.append(d)
+            dels.append(x // d)
+    return set(dels)
+
+for x in range(700_001, 701_111):
+    r = D(x)
+    da = [i for i in r if i % 10 == 7 and i != 7]
+    if da:
         print(x, min(da))
+

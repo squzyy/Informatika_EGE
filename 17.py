@@ -564,10 +564,20 @@ for i in range(len(a) - 1):
             otv.append(x + y)
 print(len(otv), max(otv))
 """
-a = [int(i) for i in open('17.txt')]
+"""a = [int(i) for i in open('17.txt')]
 otv = []
 for i in range(len(a) - 1):
     x, y = a[i], a[i+1]
     if (x % 3 == 0) or (y % 3 == 0):
         otv.append(x + y)
-print(len(otv), max(otv))
+print(len(otv), max(otv))"""
+"""a = [int(i) for i in open('17.txt')]
+
+mn = min([i for i in a if abs(i) % 10 == 7])
+otv = []
+for i in range(len(a) - 1):
+  x, y = a[i], a[i+1]
+  if ((abs(x) % 10 == 7) + (abs(y) % 10 == 7)) == 1:
+    if (x + y)**2 >= mn**2:
+      otv.append((x + y)**2)
+print(len(otv), max(otv), mn)"""

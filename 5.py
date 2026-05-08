@@ -497,11 +497,16 @@ print(min(a))"""
 
 
 
-
-
-r = '001100'
-r1 = len(r) // 2
-r = r[r1:]
-print(r)
-
+a = []
+for n in range(1, 1000):
+    r = bin(n)[2:]
+    if n % 5 == 0:
+        r = r + r[-3:]
+    s = (n % 5) * 5
+    if n % 5 != 0:
+        r = r + bin(s)[2:]
+    R = int(r, 2)
+    if R > 256:
+        a.append(n)
+print(min(a))
 

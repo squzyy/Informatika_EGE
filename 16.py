@@ -394,7 +394,7 @@ for n in range(30000, 0, -1):
   F(n)
 result = F(20024) - 2 * F(20022) - 3 * F(20020) + 18 * F(20014)
 print(result)"""
-# Массив для хранения значений F(n)
+"""# Массив для хранения значений F(n)
 F = [0] * 20025  # индексы от 0 до 20024
 
 # Базовые значения для n <= 1000 (можно любые)
@@ -407,4 +407,25 @@ for n in range(0, 20025):
 
 # Считаем результат
 result = F[20024] - 2*F[20022] - 3*F[20020] + 18*F[20014]
-print(result)
+print(result)"""
+"""from functools import lru_cache
+@lru_cache()
+def F(n):
+    if n < 10:
+        return 3
+    if n >= 10:
+        return (n + 4) * F(n - 5)
+for n in range(1, 257500):
+    F(n)
+res = (F(257487) // 683 + F(257477) // 67) // F(257472)
+print(res)"""
+
+F = [0] * 3000
+for n in range(1, 3000):
+  if n < 2:
+    F[n] = 1
+  if n > 1 and n % 2 == 0:
+    F[n] = 2*n * F[n - 1]
+  if n > 1 and n % 2 != 0:
+    F[n] = F[n - 1] - 1
+print(int(F[2903] // F[2900]))

@@ -472,7 +472,21 @@ for a, b, c, d, e in product([0, 1], repeat = 5):
                 print(*p)"""
 
 
+from itertools import *
 
+def f(w, x, y, z):
+    return ((z == x) <= w) and (w <= (y and x))
+
+for a, b, c in product([0, 1], repeat = 3):
+    table = (
+        (1, 1, a, 0, 1),
+        (1, b, c, 0, 1),
+        (1, 0, 1, 1, 1)
+    )
+    if len(table) == len(set(table)):
+        for p in permutations('wxyz', r=4):
+            if all(f(**dict(zip(p, line))) == line[-1] for line in table):
+                print(*p)
 
 
 
