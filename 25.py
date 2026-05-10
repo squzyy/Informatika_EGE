@@ -260,7 +260,7 @@ for x in range(228224, 531136):
     if len(da) >= 4:
         print(len(r), max(r))
 """
-def D(x):
+"""def D(x):
     dels = []
     for d in range(2, int(x ** 0.5)+1):
         if x % d == 0:
@@ -274,3 +274,24 @@ for x in range(700_001, 701_111):
     if da:
         print(x, min(da))
 
+from functools import lr"""
+
+
+def count_divisors(x):
+    dels = set()
+    for d in range(1, int(x ** 0.5) + 1):
+        if x % d == 0:
+            dels.add(d)
+            dels.add(x // d)
+    return len(dels)
+
+max_count = 0
+best_number = 0
+
+for x in range(84052, 84131):
+    cnt = count_divisors(x)
+    if cnt > max_count:
+        max_count = cnt
+        best_number = x
+
+print(max_count, best_number)

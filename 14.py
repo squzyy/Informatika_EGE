@@ -618,6 +618,19 @@ while x > 0:
         k += 1
     x //= 2
 print(k)"""
-from string import printable
+"""from string import printable
 result = ''.join([i for i in printable])
-print(result)
+print(result)"""
+"""from string import *
+
+for p in range(10, 37):
+    for x in printable[:p]:
+        for y in printable[:p]:
+            for z in printable[:p]:
+                for w in printable[:p]:
+                    n1 = int(z + x + y + x + '9', p)
+                    n2 = int(x + y + '748', p)
+                    n3 = int(w + z + x + '61', p)
+                    if n1 + n2 == n3:
+                        xyzw = int(x + y + z + w, p)
+                        print(xyzw)"""

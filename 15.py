@@ -664,7 +664,7 @@ for A in range(1, 10000):
         print(A)
         break"""
 
-def Del(n, m):
+"""def Del(n, m):
     return n % m == 0
 for A in range(1, 10001):
     yes = True
@@ -674,3 +674,18 @@ for A in range(1, 10001):
             break
     if yes:
         print(A)
+"""
+P = [i for i in range(3, 17 + 1)]
+Q = [2, 3, 6, 13, 26, 39]
+
+for y in range(2, 1000):
+    A = [d for d in range(2, y) if y % d == 0]
+    if A != []:  # явная проверка что A не пустое
+        yes = True
+        for x in range(1, 100):
+            if not(((x in Q) <= (x in P)) or (x not in A)):
+                yes = False
+                break
+        if yes:
+            print(y)
+            break

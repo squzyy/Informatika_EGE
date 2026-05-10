@@ -62,10 +62,10 @@ print('1 2 3 4 5 6 7')
 for p in permutations('АБВГДЕК'):
   if all(str(p.index(x) + 1) in a[p.index(y)] for x, y in s):
     print(*p)"""
-from itertools import *
+"""from itertools import *
 a = '346 45 16 42567 24 1347 46'.split()
 s = 'АБ АВ БВ ВГ ВД ВЕ ГЕ ГК ДЕ ЕК'.split()
 print('1 2 3 4 5 6 7')
 for p in permutations('АБВГДЕК'):
   if all(str(p.index(x) + 1) in a[p.index(y)] for x, y in s):
-    print(*p)
+    print(*p)"""

@@ -223,7 +223,7 @@ print(F(40, 2))"""
   if x == y: return 1
   if x < y: return F(x + 2, y) + F(x * 2, y)
 print(F(1, 18) * F(18, 52))"""
-a = []
+"""a = []
 def F(x, y):
   if y > 4:
     return
@@ -233,4 +233,4 @@ def F(x, y):
   F(x + 2, y+1)
   F(x * 3, y+1)
 F(1, 0)
-print(len(set(a)))
+print(len(set(a)))"""
