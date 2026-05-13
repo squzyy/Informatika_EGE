@@ -420,7 +420,7 @@ for n in range(1, 257500):
 res = (F(257487) // 683 + F(257477) // 67) // F(257472)
 print(res)"""
 
-F = [0] * 3000
+"""F = [0] * 3000
 for n in range(1, 3000):
   if n < 2:
     F[n] = 1
@@ -428,4 +428,30 @@ for n in range(1, 3000):
     F[n] = 2*n * F[n - 1]
   if n > 1 and n % 2 != 0:
     F[n] = F[n - 1] - 1
-print(int(F[2903] // F[2900]))
+print(int(F[2903] // F[2900]))"""
+"""F = [None] * 3000
+for n in range(1, 3000):
+    if n == 1:
+        F[n] = 0.1397562 ** (1 / 3.2930017)
+    if n > 1:
+        F[n] = n * F[n - 1]
+otv = F[2025] / F[2023]
+otv = 2025 * 2024
+print(otv)"""
+
+F = [0] * 250_000
+G = [0] * 250_000
+for n in range(248_049, 1, -1):
+    if n >= 22560:
+        G[n] = n / 23 + 33
+    if n < 22560:
+        G[n] = G[n + 11] - 4
+for n in range(1, 248_049):
+    if n >= 21:
+        F[n] = F[n-8] + 1095
+    if n < 21:
+        F[n] = 10 * (G[n - 7] - 36)
+
+
+print(int(F[548]))
+    

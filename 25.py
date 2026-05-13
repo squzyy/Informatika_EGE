@@ -277,7 +277,7 @@ for x in range(700_001, 701_111):
 from functools import lr"""
 
 
-def count_divisors(x):
+"""def count_divisors(x):
     dels = set()
     for d in range(1, int(x ** 0.5) + 1):
         if x % d == 0:
@@ -294,4 +294,29 @@ for x in range(84052, 84131):
         max_count = cnt
         best_number = x
 
-print(max_count, best_number)
+print(max_count, best_number)"""
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def D(x):
+    dels = []
+    for d in range(2, int(x ** 0.5) + 1):
+        if x % d == 0:
+            if is_prime(d):
+                dels.append(d)
+            other = x // d
+            if is_prime(other) and other != d:
+                dels.append(other)
+    return set(dels)
+
+for x in range(500000, 501000):
+    r = D(x)
+    R = sum(r)
+    if R > 2000 and R % 10 == 7:
+        print(x, R)

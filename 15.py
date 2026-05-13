@@ -675,7 +675,7 @@ for A in range(1, 10001):
     if yes:
         print(A)
 """
-P = [i for i in range(3, 17 + 1)]
+"""P = [i for i in range(3, 17 + 1)]
 Q = [2, 3, 6, 13, 26, 39]
 
 for y in range(2, 1000):
@@ -688,4 +688,41 @@ for y in range(2, 1000):
                 break
         if yes:
             print(y)
+            break"""
+
+"""def f(x, y, A):
+    return (78125 != y + 4 * x) or ((A > x) and (A > y))
+
+for A in range(0, 100000):
+    yes = True
+    for x in range(1, 20000):
+        y = 78125 - 4 * x
+        if not f(x, y, A):
+            yes = False
             break
+    if yes:
+        print(A)
+        break"""
+"""def Del(n, m):
+    return n % m == 0
+
+for a in range(1, 10_000):
+    yes = True
+    for x in range(1, 1000):
+        if not((not Del(x,a)) <= (Del(x, 12) <= (not Del(x,14)))):
+            yes = False
+    if yes:
+        print(a)"""
+
+"""def Del(n, m):
+    return n % m == 0
+
+def F(x, A):
+    return (((Del(x, A) and Del(x, 36)) <= Del(x, 324)) and (A > 100))
+
+for A in range(1, 1000):
+    if all(F(x, A) for x in range(1, 1000)):
+        print(A)
+        break"""
+
+

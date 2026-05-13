@@ -479,7 +479,7 @@ for i in open('9.txt'):
     if len(to_3) == 2 and len(to_1) == 4:
         if to_3[0] > (sum(to_1) / len(to_1)):
             print(k)"""
-k = 0
+"""k = 0
 for i in open('9.txt'):
     a = ([int(x) for x in i.split()])
     to_1 = [x for x in a if a.count(x) == 1]
@@ -487,4 +487,7 @@ for i in open('9.txt'):
     if len(to_3) == 4 and len(to_1) == 3:
         if (sum(to_1) / len(to_1)) <= (sum(a) / len(a)):
             k += 1
-            print(k)
+            print(k)"""
+
+
+
