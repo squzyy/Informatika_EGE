@@ -211,7 +211,7 @@ for i in range(len(positions) - 239):  # 240 E подряд
 
 print(mn)"""
 
-a = open('24.txt').readline()
+"""a = open('24.txt').readline()
 a = a.replace('4', 'a').replace('3', 'e')
 a = a.replace('4', 'a').replace('3', 'e')
 a = a.replace('yandex', '******')
@@ -224,5 +224,16 @@ for i in range(len(a)):
         mx = max(mx, k)
     else:
         k = 0
-print(mx)
+print(mx)"""
         
+a = open('24.txt').readline()
+
+mx = 1
+for l in range(len(a)):
+    for r in range(l+mx, len(a)):
+        s = a[l:r+1]
+        if s.count('BC') > 190:
+            break
+        if s.count('BC') == 190:
+            mx = max(mx, len(s))
+print(mx)

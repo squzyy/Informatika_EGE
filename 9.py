@@ -490,4 +490,12 @@ for i in open('9.txt'):
             print(k)"""
 
 
-
+k = 0
+for i in open('9.txt'):
+    a = sorted([int(x) for x in i.split()])
+    if a[-1] < (a[0] + a[1] + a[2]):
+        if ((a[0] + a[1] != a[2] + a[3]) and \
+            (a[0] + a[2] != a[1] + a[3]) and \
+            (a[0] + a[3] != a[2] + a[1])):
+            k += 1
+print(k)
